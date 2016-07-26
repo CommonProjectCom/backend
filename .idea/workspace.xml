@@ -28,8 +28,8 @@
       <file leaf-file-name="WelcomeServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/in/dergachovda/WelcomeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+            <state relative-caret-position="396">
+              <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,7 +42,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
-              <folding />
+              <folding>
+                <marker date="1469540476244" expanded="true" signature="31:134" ph="..." />
+                <marker date="1469540476244" expanded="true" signature="53:126" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -726,7 +729,7 @@
       <option name="presentableId" value="Default" />
       <updated>1469537051050</updated>
       <workItem from="1469537056913" duration="1127000" />
-      <workItem from="1469538449829" duration="2077000" />
+      <workItem from="1469538449829" duration="2998000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -763,11 +766,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469540559568</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Back">
+      <created>1469540920694</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1469540920694</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3204000" />
+    <option name="totallyTimeSpent" value="4125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -817,7 +827,8 @@
     <MESSAGE value="Deploy" />
     <MESSAGE value="add ContentType(&quot;text/html&quot;)" />
     <MESSAGE value="Add Title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Title" />
+    <MESSAGE value="Add Back" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Back" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -858,7 +869,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1469540476244" expanded="true" signature="31:134" ph="..." />
+            <marker date="1469540476244" expanded="true" signature="53:126" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -880,8 +894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/in/dergachovda/WelcomeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        <state relative-caret-position="396">
+          <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
