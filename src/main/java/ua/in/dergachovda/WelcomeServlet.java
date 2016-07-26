@@ -16,7 +16,7 @@ public class WelcomeServlet extends HttpServlet {
         writer.println("<head>");
         writer.println("</head>");
         writer.println("<body>");
-        writer.println("<h1>University database:</h1>");
+        writer.println("<h1>University database</h1>");
         writer.println("</body>");
         writer.println("</html>");
     }
