@@ -20,6 +20,7 @@ public class WelcomeServlet extends HttpServlet {
         writer.println("</head>");
         writer.println("<body>");
         writer.println("<h1>Hello!</h1>");
+        writer.println("<br><a href=\"#\" onclick=\"history.back();\"><- Back</a>");
         writer.println("</body>");
         writer.println("</html>");
     }
