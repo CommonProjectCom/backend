@@ -13,6 +13,7 @@ public class WelcomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
+
         writer.println("<!doctype html>");
         writer.println("<html lang=\"en\">");
         writer.println("<head>");
