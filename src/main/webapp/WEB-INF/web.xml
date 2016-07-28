@@ -11,8 +11,8 @@
         <servlet-class>ua.in.dergachovda.WelcomeServlet</servlet-class>
     </servlet>
     <!--<servlet>-->
-        <!--<servlet-name>WebSocket</servlet-name>-->
-        <!--<servlet-class>test.EchoServer</servlet-class>-->
+        <!--<servlet-name>App Servlet</servlet-name>-->
+        <!--<servlet-class>app.DoubleMeServlet</servlet-class>-->
     <!--</servlet>-->
 
     <servlet-mapping>
@@ -20,8 +20,8 @@
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
     <!--<servlet-mapping>-->
-        <!--<servlet-name>WebSocket</servlet-name>-->
-        <!--<url-pattern>/websocket</url-pattern>-->
+        <!--<servlet-name>App Servlet</servlet-name>-->
+        <!--<url-pattern>/DoubleMeServlet</url-pattern>-->
     <!--</servlet-mapping>-->
 
 </web-app>
