@@ -10,11 +10,19 @@
         <servlet-name>Welcome Servlet</servlet-name>
         <servlet-class>ua.in.dergachovda.WelcomeServlet</servlet-class>
     </servlet>
+    <!--<servlet>-->
+        <!--<servlet-name>WebSocket</servlet-name>-->
+        <!--<servlet-class>ua.in.dergachovda.EchoAnnotation</servlet-class>-->
+    <!--</servlet>-->
 
     <servlet-mapping>
         <servlet-name>Welcome Servlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>WebSocket</servlet-name>-->
+        <!--<url-pattern>/websocket/echoAnnotation</url-pattern>-->
+    <!--</servlet-mapping>-->
 
 </web-app>
 
