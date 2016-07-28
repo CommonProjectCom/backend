@@ -1,4 +1,4 @@
-package ua.in.dergachovda.test;
+package test;
 
 import java.io.IOException;
 
