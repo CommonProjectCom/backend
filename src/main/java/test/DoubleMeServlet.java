@@ -1,4 +1,4 @@
-package app;
+package test;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/DoubleMeServlet")
+@WebServlet("/NewGameServlet")
 public class DoubleMeServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;

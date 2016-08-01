@@ -12,7 +12,7 @@
     </servlet>
     <!--<servlet>-->
         <!--<servlet-name>App Servlet</servlet-name>-->
-        <!--<servlet-class>app.DoubleMeServlet</servlet-class>-->
+        <!--<servlet-class>app.NewGameServlet</servlet-class>-->
     <!--</servlet>-->
 
     <servlet-mapping>
@@ -21,7 +21,7 @@
     </servlet-mapping>
     <!--<servlet-mapping>-->
         <!--<servlet-name>App Servlet</servlet-name>-->
-        <!--<url-pattern>/DoubleMeServlet</url-pattern>-->
+        <!--<url-pattern>/NewGameServlet</url-pattern>-->
     <!--</servlet-mapping>-->
 
 </web-app>
