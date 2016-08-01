@@ -13,11 +13,7 @@ public class GameDB {
     private GameDB() {
         try {
             isConnect();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -38,7 +34,7 @@ public class GameDB {
         return true;
     }
 
-    private Properties loadProperties() throws IOException{
+    private Properties loadProperties() throws IOException {
         Properties properties = new Properties();
         InputStream stream = getClass().getResourceAsStream("db.properties");
         properties.load(stream);
@@ -56,7 +52,9 @@ public class GameDB {
         statement.execute(select);
 
         ResultSet resultSet = statement.getResultSet();
-        gameID = resultSet.getInt("LAST_INSERT_ID()");
+        if (resultSet.next()) {
+            gameID = resultSet.getInt("LAST_INSERT_ID()");
+        }
 
         return gameID;
     }

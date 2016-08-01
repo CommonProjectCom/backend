@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="Deploy">
+    <list default="true" id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="DISTINCT">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoAnnotation.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoEndpoint.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/.gitkeep" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/echo/echo.xhtml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" afterPath="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/game/db/db.properties" afterPath="$PROJECT_DIR$/src/main/resources/game/db/db.properties" />
     </list>
     <list id="01078dcb-bdab-43b6-ba49-fcd677d864af" name="Rejected commit: Default" comment="test" />
+    <list id="52c3d324-b5b7-4c4f-bbbd-b25726b54e90" name="Rejected commit: Default (2)" comment="DISTINCT" />
     <ignored path="mytomcatapp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -84,13 +87,13 @@
       <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+            <state relative-caret-position="381">
+              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1470062277177" expanded="true" signature="1441:1472" ph="INSERT INTO current_games... " />
-                <marker date="1470062277177" expanded="true" signature="1441:1491" ph="SELECT lastn... students" />
-                <marker date="1470062277177" expanded="true" signature="1520:1562" ph="SELECT LAST_... current_games" />
+                <marker date="1470062948145" expanded="true" signature="1335:1366" ph="INSERT INTO current_games... " />
+                <marker date="1470062948145" expanded="true" signature="1335:1385" ph="SELECT lastn... students" />
+                <marker date="1470062948145" expanded="true" signature="1413:1464" ph="SELECT DISTI... current_games" />
               </folding>
             </state>
           </provider>
@@ -99,8 +102,8 @@
       <file leaf-file-name="db.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/game/db/db.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="71" selection-start-line="0" selection-start-column="71" selection-end-line="0" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -194,10 +197,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/game/db.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/TestDB.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/game/db/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" />
         <option value="$PROJECT_DIR$/src/test/GameDBTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/game/db/db.properties" />
       </list>
     </option>
   </component>
@@ -495,6 +498,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Client" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -975,7 +979,7 @@
       <workItem from="1469609488713" duration="8401000" />
       <workItem from="1469695276005" duration="7943000" />
       <workItem from="1470040631941" duration="848000" />
-      <workItem from="1470047098553" duration="11950000" />
+      <workItem from="1470047098553" duration="12447000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -1180,11 +1184,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470062327144</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Deploy">
+      <created>1470062870628</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1470062870628</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33360000" />
+    <option name="totallyTimeSpent" value="33857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1204,7 +1215,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281075" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32586786" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1236,6 +1247,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <confirmMoveToFailedCommit value="2" />
     <MESSAGE value="add ContentType(&quot;text/html&quot;)" />
     <MESSAGE value="Add Title" />
     <MESSAGE value="Add Back" />
@@ -1252,11 +1264,12 @@
     <MESSAGE value="fix bd" />
     <MESSAGE value="fix url" />
     <MESSAGE value="add test" />
-    <MESSAGE value="Deploy" />
     <MESSAGE value="all fix" />
     <MESSAGE value="fix" />
     <MESSAGE value="LAST_INSERT_ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="LAST_INSERT_ID" />
+    <MESSAGE value="DISTINCT" />
+    <MESSAGE value="Deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deploy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1565,14 +1578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/game/db/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -1593,15 +1598,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/game/db/db.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="71" selection-start-line="0" selection-start-column="71" selection-end-line="0" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        <state relative-caret-position="381">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1470062277177" expanded="true" signature="1441:1472" ph="INSERT INTO current_games... " />
-            <marker date="1470062277177" expanded="true" signature="1441:1491" ph="SELECT lastn... students" />
-            <marker date="1470062277177" expanded="true" signature="1520:1562" ph="SELECT LAST_... current_games" />
+            <marker date="1470062948145" expanded="true" signature="1335:1366" ph="INSERT INTO current_games... " />
+            <marker date="1470062948145" expanded="true" signature="1335:1385" ph="SELECT lastn... students" />
+            <marker date="1470062948145" expanded="true" signature="1413:1464" ph="SELECT DISTI... current_games" />
           </folding>
         </state>
       </provider>
