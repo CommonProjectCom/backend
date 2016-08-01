@@ -56,7 +56,7 @@ public class GameDB {
         statement.execute(select);
 
         ResultSet resultSet = statement.getResultSet();
-        gameID = resultSet.getInt("id");
+        gameID = resultSet.getInt("last_insert_id()");
 
         return gameID;
     }
