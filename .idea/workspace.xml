@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="test">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/GameDBTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/TestDB.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoAnnotation.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoEndpoint.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/.gitkeep" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/echo/echo.xhtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mytomcatapp_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mytomcatapp_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mytomcatapp.iml" afterPath="$PROJECT_DIR$/mytomcatapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <list id="01078dcb-bdab-43b6-ba49-fcd677d864af" name="Rejected commit: Default" comment="test" />
     <ignored path="mytomcatapp.iws" />
@@ -131,21 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestDB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/TestDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameDBTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/GameDBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -931,7 +914,7 @@
       <workItem from="1469609488713" duration="8401000" />
       <workItem from="1469695276005" duration="7943000" />
       <workItem from="1470040631941" duration="848000" />
-      <workItem from="1470047098553" duration="9742000" />
+      <workItem from="1470047098553" duration="10521000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -1094,11 +1077,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470057915311</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add test">
+      <created>1470059328724</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1470059328724</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31152000" />
+    <option name="totallyTimeSpent" value="31931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="833" y="0" width="854" height="1017" extended-state="0" />
@@ -1106,7 +1096,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32579187" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32579187" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1167,7 +1157,8 @@
     <MESSAGE value="add New Game with DB" />
     <MESSAGE value="fix bd" />
     <MESSAGE value="fix url" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix url" />
+    <MESSAGE value="add test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1507,8 +1498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/GameDBTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
