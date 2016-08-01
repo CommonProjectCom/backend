@@ -10,19 +10,10 @@
         <servlet-name>Welcome Servlet</servlet-name>
         <servlet-class>ua.in.dergachovda.WelcomeServlet</servlet-class>
     </servlet>
-    <!--<servlet>-->
-        <!--<servlet-name>App Servlet</servlet-name>-->
-        <!--<servlet-class>app.NewGameServlet</servlet-class>-->
-    <!--</servlet>-->
-
     <servlet-mapping>
         <servlet-name>Welcome Servlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>App Servlet</servlet-name>-->
-        <!--<url-pattern>/NewGameServlet</url-pattern>-->
-    <!--</servlet-mapping>-->
 
 </web-app>
 

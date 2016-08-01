@@ -45,7 +45,7 @@ public class GameDB {
         int gameID = -1;
 
         String insert = "INSERT INTO current_games(name) VALUES('New game')";
-        String select = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
+        String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
 
         Statement statement = connection.createStatement();
         statement.execute(insert);
