@@ -39,7 +39,7 @@ public class NewGameServlet extends HttpServlet {
             }
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-            writer.write(gameID);
+            writer.write("id:" + gameID);
             writer.flush();
             writer.close();
         } catch (IOException e) {
