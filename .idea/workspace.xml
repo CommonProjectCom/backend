@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/string/StringServlet.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoAnnotation.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoEndpoint.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/echo/echo.xhtml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/server.xml" afterPath="$PROJECT_DIR$/.openshift/config/server.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/settings.prod.xml" afterPath="$PROJECT_DIR$/.openshift/config/settings.prod.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/settings.rhcloud.xml" afterPath="$PROJECT_DIR$/.openshift/config/settings.rhcloud.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/settings.stg.xml" afterPath="$PROJECT_DIR$/.openshift/config/settings.stg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/chronograph" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/chronograph" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index (beckup).html" afterPath="$PROJECT_DIR$/src/main/webapp/index (beckup).html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
     </list>
     <ignored path="mytomcatapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +50,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1783#1784#0" expanded="false" />
+                <element signature="e#1859#1860#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +74,8 @@
       <file leaf-file-name="StringServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/string/StringServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="578">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -501,7 +495,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="RemoteServers" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -972,7 +966,7 @@
       <workItem from="1469609488713" duration="8401000" />
       <workItem from="1469695276005" duration="7943000" />
       <workItem from="1470040631941" duration="848000" />
-      <workItem from="1470047098553" duration="964000" />
+      <workItem from="1470047098553" duration="1593000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -1065,19 +1059,26 @@
       <option name="project" value="LOCAL" />
       <updated>1469706200294</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add String Servlet">
+      <created>1470048519280</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1470048519280</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22374000" />
+    <option name="totallyTimeSpent" value="23003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756326" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32749325" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1131,7 +1132,8 @@
     <MESSAGE value="port" />
     <MESSAGE value="Fix package" />
     <MESSAGE value="App" />
-    <option name="LAST_COMMIT_MESSAGE" value="App" />
+    <MESSAGE value="add String Servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="add String Servlet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1156,7 +1158,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1783#1784#0" expanded="false" />
+            <element signature="e#1859#1860#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1206,7 +1212,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1783#1784#0" expanded="false" />
+            <element signature="e#1859#1860#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1366,7 +1376,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1783#1784#0" expanded="false" />
+            <element signature="e#1859#1860#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1398,6 +1412,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1413,8 +1428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/string/StringServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="578">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
           <folding />
         </state>
       </provider>

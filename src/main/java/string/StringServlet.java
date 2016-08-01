@@ -39,20 +39,16 @@ public class StringServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
 
-            String output = recievedString.toUpperCase();
+//            String output = recievedString;
 
-            writer.write(output);
+            writer.write(recievedString);
             writer.flush();
             writer.close();
 
         } catch (IOException e) {
-
-            try {
-                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                response.getWriter().print(e.getMessage());
-                response.getWriter().close();
-            } catch (IOException ioe) {
-            }
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            response.getWriter().print(e.getMessage());
+            response.getWriter().close();
         }
     }
 
