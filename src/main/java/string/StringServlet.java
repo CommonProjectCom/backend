@@ -39,9 +39,9 @@ public class StringServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
 
-//            String output = recievedString;
+            String output = recievedString.toUpperCase();
 
-            writer.write(recievedString);
+            writer.write(output);
             writer.flush();
             writer.close();
 
