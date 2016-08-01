@@ -29,9 +29,14 @@ public class NewGameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         GameDB bd = GameDB.getInstance();
-        int gameID = 0;
+        int gameID = -1;
         try {
-            gameID = bd.createGame();
+            try {
+                gameID = bd.createGame();
+            }
+             catch (SQLException e) {
+                e.printStackTrace();
+            }
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
             writer.write(gameID);
@@ -41,8 +46,6 @@ public class NewGameServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
