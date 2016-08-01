@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="test">
+    <list default="true" id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="Deploy">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoAnnotation.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/EchoEndpoint.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/.gitkeep" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/echo/echo.xhtml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" afterPath="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/GameDBTest.java" afterPath="$PROJECT_DIR$/src/test/GameDBTest.java" />
     </list>
     <list id="01078dcb-bdab-43b6-ba49-fcd677d864af" name="Rejected commit: Default" comment="test" />
     <ignored path="mytomcatapp.iws" />
@@ -72,8 +74,8 @@
       <file leaf-file-name="NewGameServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            <state relative-caret-position="261">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,13 +86,13 @@
       <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="51" column="68" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="68" />
+            <state relative-caret-position="432">
+              <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1470056336969" expanded="true" signature="1441:1472" ph="INSERT INTO current_games... " />
-                <marker date="1470056336969" expanded="true" signature="1441:1491" ph="SELECT lastn... students" />
-                <marker date="1470056336969" expanded="true" signature="1520:1562" ph="SELECT LAST_... current_games" />
+                <marker date="1470062277177" expanded="true" signature="1441:1472" ph="INSERT INTO current_games... " />
+                <marker date="1470062277177" expanded="true" signature="1441:1491" ph="SELECT lastn... students" />
+                <marker date="1470062277177" expanded="true" signature="1520:1562" ph="SELECT LAST_... current_games" />
               </folding>
             </state>
           </provider>
@@ -129,8 +131,8 @@
       <file leaf-file-name="GameDBTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/GameDBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="136">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,13 +193,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/src/main/java/test/DoubleMeServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/StringServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" />
         <option value="$PROJECT_DIR$/src/main/resources/game/db.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/TestDB.java" />
-        <option value="$PROJECT_DIR$/src/test/GameDBTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" />
         <option value="$PROJECT_DIR$/src/main/resources/game/db/db.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" />
+        <option value="$PROJECT_DIR$/src/test/GameDBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" />
       </list>
     </option>
   </component>
@@ -342,10 +344,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -979,7 +977,7 @@
       <workItem from="1469609488713" duration="8401000" />
       <workItem from="1469695276005" duration="7943000" />
       <workItem from="1470040631941" duration="848000" />
-      <workItem from="1470047098553" duration="11313000" />
+      <workItem from="1470047098553" duration="11660000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -1170,11 +1168,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470061753419</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix">
+      <created>1470062089321</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1470062089321</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32723000" />
+    <option name="totallyTimeSpent" value="33070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1237,7 +1242,6 @@
     <MESSAGE value="App" />
     <MESSAGE value="add String Servlet" />
     <MESSAGE value="test" />
-    <MESSAGE value="fix" />
     <MESSAGE value="UpperCase" />
     <MESSAGE value="add New Game with DB" />
     <MESSAGE value="fix bd" />
@@ -1245,7 +1249,8 @@
     <MESSAGE value="add test" />
     <MESSAGE value="Deploy" />
     <MESSAGE value="all fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="all fix" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1554,16 +1559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/GameDBTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/game/db/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1574,8 +1569,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        <state relative-caret-position="261">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/GameDBTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1584,13 +1589,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="51" column="68" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="68" />
+        <state relative-caret-position="432">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1470056336969" expanded="true" signature="1441:1472" ph="INSERT INTO current_games... " />
-            <marker date="1470056336969" expanded="true" signature="1441:1491" ph="SELECT lastn... students" />
-            <marker date="1470056336969" expanded="true" signature="1520:1562" ph="SELECT LAST_... current_games" />
+            <marker date="1470062277177" expanded="true" signature="1441:1472" ph="INSERT INTO current_games... " />
+            <marker date="1470062277177" expanded="true" signature="1441:1491" ph="SELECT lastn... students" />
+            <marker date="1470062277177" expanded="true" signature="1520:1562" ph="SELECT LAST_... current_games" />
           </folding>
         </state>
       </provider>
