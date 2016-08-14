@@ -41,16 +41,16 @@ public class GameDB {
         return properties;
     }
 
-    public int createGame() throws SQLException {
+    public int createGame(String clientName) throws SQLException {
         int gameID = -1;
 
-        String insert = "INSERT INTO current_games(name) VALUES('New game')";
+        String insert = "INSERT INTO current_games(name) VALUES('" + clientName + "')";
         String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
 
         Statement statement = connection.createStatement();
         statement.execute(insert);
-        statement.execute(select);
 
+        statement.execute(select);
         ResultSet resultSet = statement.getResultSet();
         if (resultSet.next()) {
             gameID = resultSet.getInt("LAST_INSERT_ID()");

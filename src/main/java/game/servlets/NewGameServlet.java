@@ -3,6 +3,7 @@ package game.servlets;
 import game.db.GameDB;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletInputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,12 +29,24 @@ public class NewGameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         GameDB bd = GameDB.getInstance();
+
         int gameID = -1;
+
         try {
-            try {
-                gameID = bd.createGame();
+            int length = request.getContentLength();
+            byte[] input = new byte[length];
+            ServletInputStream sin = request.getInputStream();
+            int c, count = 0;
+            while ((c = sin.read(input, count, input.length - count)) != -1) {
+                count += c;
             }
-             catch (SQLException e) {
+            sin.close();
+
+            String recievedString = new String(input);
+
+            try {
+                gameID = bd.createGame(recievedString);
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
             response.setStatus(HttpServletResponse.SC_OK);
