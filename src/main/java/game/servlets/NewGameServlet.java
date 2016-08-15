@@ -51,7 +51,6 @@ public class NewGameServlet extends HttpServlet {
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-            writer.write("HostName:" + hostName);
             writer.write("GameID:" + gameID);
             writer.flush();
             writer.close();
