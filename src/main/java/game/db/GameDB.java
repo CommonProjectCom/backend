@@ -47,18 +47,19 @@ public class GameDB {
     }
 
     public int createGame(String clientName, Goroda object) {
-        int id = -1;
+        int gameID = -1;
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL, PreparedStatement.RETURN_GENERATED_KEYS);
+            preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
             preparedStatement.setString(1, clientName);
             preparedStatement.setObject(2, object);
             preparedStatement.executeUpdate();
+            gameID = 0;
+            preparedStatement.execute("SELECT DISTINCT LAST_INSERT_ID() from current_games");
 
-            ResultSet resultSet = preparedStatement.getGeneratedKeys();
-
+            ResultSet resultSet = preparedStatement.getResultSet();
             if (resultSet.next()) {
-                id = resultSet.getInt("id");
+                gameID = resultSet.getInt("LAST_INSERT_ID()");
             }
 
             resultSet.close();
@@ -67,7 +68,7 @@ public class GameDB {
             e.printStackTrace();
         }
 
-        return id;
+        return gameID;
     }
 
     public Goroda readGorodaFromBD(int id) throws Exception {

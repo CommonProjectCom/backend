@@ -104,12 +104,13 @@
       <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+            <state relative-caret-position="179">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1471272789587" expanded="true" signature="211:270" ph="INSERT INTO current_games... " />
-                <marker date="1471272789587" expanded="true" signature="316:367" ph="SELECT objec... java_objects" />
+                <marker date="1471274792839" expanded="true" signature="211:270" ph="INSERT INTO current_games... " />
+                <marker date="1471274792839" expanded="true" signature="316:367" ph="SELECT objec... java_objects" />
+                <marker date="1471274792839" expanded="true" signature="1910:1961" ph="SELECT DISTI... current_games" />
               </folding>
             </state>
           </provider>
@@ -1056,7 +1057,7 @@
       <workItem from="1470071781200" duration="2112000" />
       <workItem from="1471168684159" duration="1219000" />
       <workItem from="1471251592970" duration="1138000" />
-      <workItem from="1471267176061" duration="5595000" />
+      <workItem from="1471267176061" duration="7587000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -1359,11 +1360,25 @@
       <option name="project" value="LOCAL" />
       <updated>1471272101582</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fix">
+      <created>1471273920666</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1471273920666</updated>
+    </task>
+    <task id="LOCAL-00045" summary="PreparedStatement.RETURN_GENERATED_KEYS">
+      <created>1471274278716</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1471274278717</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44300000" />
+    <option name="totallyTimeSpent" value="46292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -1371,7 +1386,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.322237" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.322237" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1386,7 +1401,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32586786" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288948" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32756326" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280543" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16537468" sideWeight="0.49306932" order="0" side_tool="false" content_ui="combo" />
@@ -1416,7 +1431,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmMoveToFailedCommit value="2" />
-    <MESSAGE value="del echo" />
     <MESSAGE value="port" />
     <MESSAGE value="Fix package" />
     <MESSAGE value="App" />
@@ -1438,10 +1452,11 @@
     <MESSAGE value="fix statement" />
     <MESSAGE value="add object" />
     <MESSAGE value="fix Serializable" />
-    <MESSAGE value="fix" />
     <MESSAGE value="fix try" />
     <MESSAGE value="fix READ_OBJECT_SQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix READ_OBJECT_SQL" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="PreparedStatement.RETURN_GENERATED_KEYS" />
+    <option name="LAST_COMMIT_MESSAGE" value="PreparedStatement.RETURN_GENERATED_KEYS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1815,12 +1830,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+        <state relative-caret-position="179">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1471272789587" expanded="true" signature="211:270" ph="INSERT INTO current_games... " />
-            <marker date="1471272789587" expanded="true" signature="316:367" ph="SELECT objec... java_objects" />
+            <marker date="1471274792839" expanded="true" signature="211:270" ph="INSERT INTO current_games... " />
+            <marker date="1471274792839" expanded="true" signature="316:367" ph="SELECT objec... java_objects" />
+            <marker date="1471274792839" expanded="true" signature="1910:1961" ph="SELECT DISTI... current_games" />
           </folding>
         </state>
       </provider>
