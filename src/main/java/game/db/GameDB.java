@@ -50,7 +50,7 @@ public class GameDB {
         int id = -1;
         PreparedStatement preparedStatement = null;
         try {
-            preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
+            preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL, PreparedStatement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, clientName);
             preparedStatement.setObject(2, object);
             preparedStatement.executeUpdate();
