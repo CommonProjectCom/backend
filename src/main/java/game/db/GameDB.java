@@ -44,16 +44,14 @@ public class GameDB {
     }
 
     public int createGame(String clientName, Goroda object) throws SQLException {
-        String insert = "INSERT INTO current_games(name, object_value) VALUES(?, ?)";
-        String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
-
-        PreparedStatement prStatement = connection.prepareStatement(insert);
-        prStatement.setString(1, clientName);
-        prStatement.setObject(2, object);
-        prStatement.executeUpdate();
-
         Statement statement = connection.createStatement();
+
+        String insert = "INSERT INTO current_games(name, object_value) VALUES(" + clientName + ", " + object + ")";
+        statement.execute(insert);
+
+        String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
         statement.execute(select);
+
         ResultSet resultSet = statement.getResultSet();
         if (resultSet.next()) {
             return resultSet.getInt("LAST_INSERT_ID()");
