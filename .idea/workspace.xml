@@ -90,17 +90,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewGameServlet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewGameServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+            <state relative-caret-position="345">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="579">
@@ -225,9 +225,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/game/servlets/StringServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/Goroda.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" />
       </list>
     </option>
   </component>
@@ -1055,7 +1055,7 @@
       <workItem from="1470071781200" duration="2112000" />
       <workItem from="1471168684159" duration="1219000" />
       <workItem from="1471251592970" duration="1138000" />
-      <workItem from="1471267176061" duration="4119000" />
+      <workItem from="1471267176061" duration="4399000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -1337,19 +1337,26 @@
       <option name="project" value="LOCAL" />
       <updated>1471271025789</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fix">
+      <created>1471271449141</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1471271449141</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42824000" />
+    <option name="totallyTimeSpent" value="43104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.322237" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.322237" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1415,11 +1422,11 @@
     <MESSAGE value="fix problem with New Game" />
     <MESSAGE value="add error code" />
     <MESSAGE value="add Object to Table" />
-    <MESSAGE value="fix" />
     <MESSAGE value="fix statement" />
     <MESSAGE value="add object" />
     <MESSAGE value="fix Serializable" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Serializable" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1783,14 +1790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
@@ -1800,6 +1799,14 @@
             <marker date="1471270313923" expanded="true" signature="211:270" ph="INSERT INTO current_games... " />
             <marker date="1471270313923" expanded="true" signature="316:366" ph="SELECT objec... java_objects" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

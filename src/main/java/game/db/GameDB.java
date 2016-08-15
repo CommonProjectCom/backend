@@ -46,22 +46,26 @@ public class GameDB {
         return properties;
     }
 
-    public int createGame(String clientName, Goroda object) throws SQLException {
-
-        PreparedStatement preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
-
-        preparedStatement.setString(1, clientName);
-        preparedStatement.setObject(2, object);
-        preparedStatement.executeUpdate();
-
-        ResultSet resultSet = preparedStatement.getGeneratedKeys();
+    public int createGame(String clientName, Goroda object) {
         int id = -1;
-        if (resultSet.next()) {
-            id = resultSet.getInt(1);
-        }
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
+            preparedStatement.setString(1, clientName);
+            preparedStatement.setObject(2, object);
+            preparedStatement.executeUpdate();
 
-        resultSet.close();
-        preparedStatement.close();
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+
+            if (resultSet.next()) {
+                id = resultSet.getInt(1);
+            }
+
+            resultSet.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         return id;
     }

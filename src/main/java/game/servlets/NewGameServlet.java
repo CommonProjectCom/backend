@@ -58,8 +58,6 @@ public class NewGameServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
