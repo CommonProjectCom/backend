@@ -58,7 +58,7 @@ public class GameDB {
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
 
             if (resultSet.next()) {
-                id = resultSet.getInt(1);
+                id = resultSet.getInt("id");
             }
 
             resultSet.close();
