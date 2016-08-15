@@ -10,7 +10,7 @@ import java.util.Properties;
 public class GameDB {
 
     static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(name, object_value) VALUES (?, ?)";
-    static final String READ_OBJECT_SQL = "SELECT object_value FROM java_objects WHERE id = ?";
+    static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
 
     private Connection connection;
     private static GameDB instance;
