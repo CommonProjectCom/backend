@@ -42,20 +42,20 @@ public class GameDB {
     }
 
     public int createGame(String clientName) throws SQLException {
-        int gameID = -1;
-
         String insert = "INSERT INTO current_games(name) VALUES('" + clientName + "')";
         String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
 
         Statement statement = connection.createStatement();
-        statement.execute(insert);
+        if (!statement.execute(insert)) {
+            return -1;
+        }
 
         statement.execute(select);
         ResultSet resultSet = statement.getResultSet();
         if (resultSet.next()) {
-            gameID = resultSet.getInt("LAST_INSERT_ID()");
+            return resultSet.getInt("LAST_INSERT_ID()");
         }
 
-        return gameID;
+        return 0;
     }
 }

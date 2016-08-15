@@ -30,7 +30,7 @@ public class NewGameServlet extends HttpServlet {
 
         GameDB bd = GameDB.getInstance();
 
-        int gameID = -1;
+        int gameID;
 
         try {
             int length = request.getContentLength();
@@ -44,11 +44,8 @@ public class NewGameServlet extends HttpServlet {
 
             String recievedString = new String(input);
 
-            try {
-                gameID = bd.createGame(recievedString);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            gameID = bd.createGame(recievedString);
+
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
             writer.write("GameID:" + gameID);
@@ -58,6 +55,8 @@ public class NewGameServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
