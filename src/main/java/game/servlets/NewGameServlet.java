@@ -1,5 +1,6 @@
 package game.servlets;
 
+import game.Goroda;
 import game.db.GameDB;
 
 import javax.servlet.ServletException;
@@ -30,6 +31,8 @@ public class NewGameServlet extends HttpServlet {
 
         GameDB bd = GameDB.getInstance();
 
+        Goroda gogoda = new Goroda();
+
         int gameID;
 
         try {
@@ -42,12 +45,13 @@ public class NewGameServlet extends HttpServlet {
             }
             sin.close();
 
-            String recievedString = new String(input);
+            String hostName = new String(input);
 
-            gameID = bd.createGame(recievedString);
+            gameID = bd.createGame(hostName, gogoda);
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
+            writer.write("HostName:" + hostName);
             writer.write("GameID:" + gameID);
             writer.flush();
             writer.close();

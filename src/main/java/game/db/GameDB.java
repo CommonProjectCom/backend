@@ -1,5 +1,7 @@
 package game.db;
 
+import game.Goroda;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -41,13 +43,16 @@ public class GameDB {
         return properties;
     }
 
-    public int createGame(String clientName) throws SQLException {
-        String insert = "INSERT INTO current_games(name) VALUES('" + clientName + "')";
+    public int createGame(String clientName, Goroda object) throws SQLException {
+        String insert = "INSERT INTO current_games(name, object_value) VALUES(?, ?)";
         String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
 
-        Statement statement = connection.createStatement();
-        statement.execute(insert);
+        PreparedStatement prStatement = connection.prepareStatement(insert);
+        prStatement.setString(1, clientName);
+        prStatement.setObject(2, object);
+        prStatement.executeUpdate();
 
+        Statement statement = connection.createStatement();
         statement.execute(select);
         ResultSet resultSet = statement.getResultSet();
         if (resultSet.next()) {
