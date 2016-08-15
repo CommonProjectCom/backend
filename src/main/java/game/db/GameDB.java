@@ -9,6 +9,9 @@ import java.util.Properties;
 
 public class GameDB {
 
+    static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(name, object_value) VALUES (?, ?)";
+    static final String READ_OBJECT_SQL = "SELECT object_value FROM java_objects WHERE id = ?";
+
     private Connection connection;
     private static GameDB instance;
 
@@ -44,19 +47,37 @@ public class GameDB {
     }
 
     public int createGame(String clientName, Goroda object) throws SQLException {
-        Statement statement = connection.createStatement();
 
-        String insert = "INSERT INTO current_games(name, object_value) VALUES(" + clientName + ", " + object + ")";
-        statement.execute(insert);
+        PreparedStatement preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
 
-        String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
-        statement.execute(select);
+        preparedStatement.setString(1, clientName);
+        preparedStatement.setObject(2, object);
+        preparedStatement.executeUpdate();
 
-        ResultSet resultSet = statement.getResultSet();
+        ResultSet resultSet = preparedStatement.getGeneratedKeys();
+        int id = -1;
         if (resultSet.next()) {
-            return resultSet.getInt("LAST_INSERT_ID()");
+            id = resultSet.getInt(1);
         }
 
-        return 0;
+        resultSet.close();
+        preparedStatement.close();
+
+        return id;
     }
+
+    public Goroda readGorodaFromBD(int id) throws Exception {
+        PreparedStatement preparedStatement = connection.prepareStatement(READ_OBJECT_SQL);
+        preparedStatement.setLong(1, id);
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        Goroda object = (Goroda) resultSet.getObject(1);
+
+        resultSet.close();
+        preparedStatement.close();
+
+        return object;
+    }
+
 }
