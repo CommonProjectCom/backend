@@ -46,9 +46,7 @@ public class GameDB {
         String select = "SELECT DISTINCT LAST_INSERT_ID() FROM current_games";
 
         Statement statement = connection.createStatement();
-        if (!statement.execute(insert)) {
-            return -1;
-        }
+        statement.execute(insert);
 
         statement.execute(select);
         ResultSet resultSet = statement.getResultSet();
