@@ -99,7 +99,7 @@ public class GameDB {
 
         while (resultSet.next()) {
             id = resultSet.getInt("id");
-            date = resultSet.getDate("date");
+//            date = resultSet.getDate("date");
             time = resultSet.getTimestamp("date");
             name = resultSet.getString("name");
         }
@@ -108,8 +108,9 @@ public class GameDB {
         statement.close();
         connection.close();
 
-        DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy XX ");
-        return "ID:" + id + " / " + "DATE:" + dateFormat.format(date) + time + " / " + "NAME:" + name;
+        time.setHours(time.getHours() + 13);
+//        DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy XX ");
+        return "ID:" + id + " / " + "DATE: " + time + " / " + "NAME:" + name;
     }
 
 }
