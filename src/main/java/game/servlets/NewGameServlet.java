@@ -27,7 +27,7 @@ public class NewGameServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        GameDB bd = GameDB.getInstance();
+        GameDB bd = new GameDB();
 
         Goroda gogoda = new Goroda();
 

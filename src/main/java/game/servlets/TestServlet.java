@@ -32,15 +32,13 @@ public class TestServlet extends HttpServlet {
 
         writer.println("</body>");
         writer.println("</html>");
-
-        GameDB bd = GameDB.getInstance();
     }
 
     private String getLastDateFromTable() {
         String str = "";
 
         try {
-            GameDB bd = GameDB.getInstance();
+            GameDB bd = new GameDB();
             str = "<h2>" + bd.getLastDateFromBD() + "</h2>";
         } catch (Exception e) {
             e.printStackTrace();

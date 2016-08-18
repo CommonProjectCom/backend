@@ -5,7 +5,6 @@ import game.Goroda;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
-import java.text.SimpleDateFormat;
 import java.util.Properties;
 
 public class GameDB {
@@ -15,9 +14,9 @@ public class GameDB {
     static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
 
     private Connection connection;
-    private static GameDB instance;
+//    private static GameDB instance;
 
-    private GameDB() {
+    public GameDB() {
         try {
             isConnect();
         } catch (IOException | SQLException | ClassNotFoundException e) {
@@ -25,11 +24,11 @@ public class GameDB {
         }
     }
 
-    public static GameDB getInstance() {
-        if (instance == null)
-            instance = new GameDB();
-        return instance;
-    }
+//    public static GameDB getInstance() {
+//        if (instance == null)
+//            instance = new GameDB();
+//        return instance;
+//    }
 
     private boolean isConnect() throws IOException, SQLException, ClassNotFoundException {
         Properties properties = loadProperties();
@@ -59,6 +58,7 @@ public class GameDB {
             preparedStatement.execute(GET_LAST_INSERT_ID);
 
             ResultSet resultSet = preparedStatement.getResultSet();
+            connection.close();
             if (resultSet.next()) {
                 gameID = resultSet.getInt("LAST_INSERT_ID()");
             }
