@@ -87,15 +87,15 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="327">
-              <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+              <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1471538583988" expanded="true" signature="275:334" ph="INSERT INTO current_games... " />
-                <marker date="1471538583988" expanded="true" signature="380:431" ph="SELECT objec... java_objects" />
-                <marker date="1471538583988" expanded="true" signature="480:531" ph="SELECT DISTI... current_games" />
-                <marker date="1471538583988" expanded="true" signature="3187:3254" ph="SELECT id, D... " />
-                <marker date="1471538583988" expanded="true" signature="3187:3255" ph="SELECT id, D... " />
-                <marker date="1471538583988" expanded="true" signature="3254:3255" ph="SELECT objec... current_games" />
+                <marker date="1471538774292" expanded="true" signature="275:334" ph="INSERT INTO current_games... " />
+                <marker date="1471538774292" expanded="true" signature="380:431" ph="SELECT objec... java_objects" />
+                <marker date="1471538774292" expanded="true" signature="480:531" ph="SELECT DISTI... current_games" />
+                <marker date="1471538774292" expanded="true" signature="3187:3254" ph="SELECT id, D... " />
+                <marker date="1471538774292" expanded="true" signature="3187:3255" ph="SELECT id, D... " />
+                <marker date="1471538774292" expanded="true" signature="3254:3255" ph="SELECT objec... current_games" />
               </folding>
             </state>
           </provider>
@@ -1014,14 +1014,7 @@
       <workItem from="1471168684159" duration="1219000" />
       <workItem from="1471251592970" duration="1138000" />
       <workItem from="1471267176061" duration="10112000" />
-      <workItem from="1471514607794" duration="15877000" />
-    </task>
-    <task id="LOCAL-00014" summary="add String Servlet">
-      <created>1470048519280</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1470048519280</updated>
+      <workItem from="1471514607794" duration="16348000" />
     </task>
     <task id="LOCAL-00015" summary="fix">
       <created>1470048933239</created>
@@ -1359,11 +1352,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471538065650</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Deploy">
+      <created>1471538614412</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1471538614412</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64694000" />
+    <option name="totallyTimeSpent" value="65165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -1808,15 +1808,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
-          <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+          <caret line="110" column="41" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1471538583988" expanded="true" signature="275:334" ph="INSERT INTO current_games... " />
-            <marker date="1471538583988" expanded="true" signature="380:431" ph="SELECT objec... java_objects" />
-            <marker date="1471538583988" expanded="true" signature="480:531" ph="SELECT DISTI... current_games" />
-            <marker date="1471538583988" expanded="true" signature="3187:3254" ph="SELECT id, D... " />
-            <marker date="1471538583988" expanded="true" signature="3187:3255" ph="SELECT id, D... " />
-            <marker date="1471538583988" expanded="true" signature="3254:3255" ph="SELECT objec... current_games" />
+            <marker date="1471538774292" expanded="true" signature="275:334" ph="INSERT INTO current_games... " />
+            <marker date="1471538774292" expanded="true" signature="380:431" ph="SELECT objec... java_objects" />
+            <marker date="1471538774292" expanded="true" signature="480:531" ph="SELECT DISTI... current_games" />
+            <marker date="1471538774292" expanded="true" signature="3187:3254" ph="SELECT id, D... " />
+            <marker date="1471538774292" expanded="true" signature="3187:3255" ph="SELECT id, D... " />
+            <marker date="1471538774292" expanded="true" signature="3254:3255" ph="SELECT objec... current_games" />
           </folding>
         </state>
       </provider>

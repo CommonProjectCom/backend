@@ -108,7 +108,7 @@ public class GameDB {
         statement.close();
         connection.close();
 
-        time.setHours(time.getHours() + 13);
+        time.setHours(time.getHours() + 7);
 //        DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy XX ");
         return "ID:" + id + " / " + "DATE: " + time + " / " + "NAME:" + name;
     }
