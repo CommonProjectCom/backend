@@ -5,7 +5,10 @@ import game.Goroda;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Properties;
+import java.util.TimeZone;
 
 public class GameDB {
 
@@ -86,23 +89,32 @@ public class GameDB {
     }
 
     public String getLastDateFromBD() throws Exception {
-        String str = "";
+        int id = -1;
+        Date date = null;
+        String name = "noName";
+
         Statement statement = connection.createStatement();
 
         statement.execute("SELECT id, date, name FROM  current_games ORDER BY  id DESC LIMIT 1");
 
         ResultSet resultSet = statement.getResultSet();
 
+
+
         while (resultSet.next()) {
-            str += "ID:" + resultSet.getInt("id") + " / ";
-            str += "DATE:" + resultSet.getDate("date") + " / ";
-            str += "NAME:" + resultSet.getString("name");
+            id = resultSet.getInt("id");
+            date = resultSet.getDate("date");
+            name = resultSet.getString("name");
         }
 
         resultSet.close();
         statement.close();
         connection.close();
-        return str;
+
+        DateFormat dateFormat = new SimpleDateFormat("z hh:mm:ss dd.MM.yyyy");
+        dateFormat.setLenient(true);
+        dateFormat.setTimeZone(TimeZone.getTimeZone("+02:00"));
+        return "ID:" + id + " / " + "DATE:" + dateFormat.format(date) + " / " + "NAME:" + name;
     }
 
 }
