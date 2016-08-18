@@ -58,11 +58,10 @@ public class GameDB {
             preparedStatement.execute(GET_LAST_INSERT_ID);
 
             ResultSet resultSet = preparedStatement.getResultSet();
-            connection.close();
             if (resultSet.next()) {
                 gameID = resultSet.getInt("LAST_INSERT_ID()");
             }
-
+            connection.close();
             resultSet.close();
             preparedStatement.close();
         } catch (SQLException e) {
@@ -82,7 +81,7 @@ public class GameDB {
 
         resultSet.close();
         preparedStatement.close();
-
+        connection.close();
         return object;
     }
 
@@ -102,7 +101,7 @@ public class GameDB {
 
         resultSet.close();
         statement.close();
-
+        connection.close();
         return str;
     }
 
