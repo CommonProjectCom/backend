@@ -90,7 +90,7 @@ public class GameDB {
     public String getLastDateFromBD() throws Exception {
         int id = -1;
         Date date = null;
-        Time time = null;
+        Timestamp time = null;
         String name = "noName";
 
         Statement statement = connection.createStatement();
@@ -100,7 +100,7 @@ public class GameDB {
         while (resultSet.next()) {
             id = resultSet.getInt("id");
             date = resultSet.getDate("date");
-            time = resultSet.getTime("date");
+            time = resultSet.getTimestamp("date");
             name = resultSet.getString("name");
         }
 
@@ -108,7 +108,7 @@ public class GameDB {
         statement.close();
         connection.close();
 
-        DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy XXX ");
+        DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy XX ");
         return "ID:" + id + " / " + "DATE:" + dateFormat.format(date) + time + " / " + "NAME:" + name;
     }
 
