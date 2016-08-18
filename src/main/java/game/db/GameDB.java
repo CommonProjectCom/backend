@@ -5,6 +5,7 @@ import game.Goroda;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.Properties;
 
 public class GameDB {
@@ -95,8 +96,8 @@ public class GameDB {
 
         while (resultSet.next()) {
             str += "ID:" + resultSet.getInt("id") + " / ";
-            str += "DATE:" + resultSet.getDate("date") + " ";
-            str += "DATE:" + resultSet.getTime("date") + " / ";
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.YY - HH:mm:ss Z");
+            str += "DATE:" + dateFormat.parse(resultSet.getDate("date").toString()) + " / ";
             str += "NAME:" + resultSet.getString("name");
         }
 
