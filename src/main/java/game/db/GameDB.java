@@ -95,7 +95,8 @@ public class GameDB {
 
         while (resultSet.next()) {
             str += "ID:" + resultSet.getInt("id") + " / ";
-            str += "DATE:" + resultSet.getDate("date") + " / ";
+            str += "DATE:" + resultSet.getDate("date") + " ";
+            str += "DATE:" + resultSet.getTime("date") + " / ";
             str += "NAME:" + resultSet.getString("name");
         }
 
