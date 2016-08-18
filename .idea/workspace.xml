@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="Deploy">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/game/servlets/TestServlet.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_1.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_3_6_v20151106.xml" afterPath="" />
@@ -18,8 +17,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/.gitkeep" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/echo/echo.xhtml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" afterPath="$PROJECT_DIR$/src/main/java/game/db/GameDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" afterPath="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" />
     </list>
     <list id="01078dcb-bdab-43b6-ba49-fcd677d864af" name="Rejected commit: Default" comment="test" />
     <list id="52c3d324-b5b7-4c4f-bbbd-b25726b54e90" name="Rejected commit: Default (2)" comment="DISTINCT" />
@@ -1030,7 +1027,7 @@
       <workItem from="1471168684159" duration="1219000" />
       <workItem from="1471251592970" duration="1138000" />
       <workItem from="1471267176061" duration="10112000" />
-      <workItem from="1471514607794" duration="4172000" />
+      <workItem from="1471514607794" duration="4314000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1469537339273</created>
@@ -1361,11 +1358,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471276553795</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add Test Servlet">
+      <created>1471518919886</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1471518919886</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52989000" />
+    <option name="totallyTimeSpent" value="53131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -1418,7 +1422,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmMoveToFailedCommit value="2" />
-    <MESSAGE value="port" />
     <MESSAGE value="Fix package" />
     <MESSAGE value="App" />
     <MESSAGE value="add String Servlet" />
@@ -1443,7 +1446,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="PreparedStatement.RETURN_GENERATED_KEYS" />
     <MESSAGE value="Deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy" />
+    <MESSAGE value="add Test Servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Test Servlet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
