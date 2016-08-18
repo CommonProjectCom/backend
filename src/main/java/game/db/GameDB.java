@@ -7,9 +7,7 @@ import java.io.InputStream;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Locale;
 import java.util.Properties;
-import java.util.TimeZone;
 
 public class GameDB {
 
@@ -110,10 +108,8 @@ public class GameDB {
         statement.close();
         connection.close();
 
-        DateFormat dateFormat = new SimpleDateFormat(" XXX dd.MM.yyyy");
-        dateFormat.setLenient(true);
-//        dateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Kiev"));
-        return "ID:" + id + " / " + "DATE:" + time + dateFormat.format(date) + " / " + "NAME:" + name;
+        DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy XXX ");
+        return "ID:" + id + " / " + "DATE:" + dateFormat.format(date) + time + " / " + "NAME:" + name;
     }
 
 }

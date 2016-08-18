@@ -86,16 +86,15 @@
       <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="112" column="69" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
+            <state relative-caret-position="144">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1471537255396" expanded="true" signature="327:386" ph="INSERT INTO current_games... " />
-                <marker date="1471537255396" expanded="true" signature="432:483" ph="SELECT objec... java_objects" />
-                <marker date="1471537255396" expanded="true" signature="532:583" ph="SELECT DISTI... current_games" />
-                <marker date="1471537255396" expanded="true" signature="3234:3301" ph="SELECT id, D... " />
-                <marker date="1471537255396" expanded="true" signature="3234:3302" ph="SELECT id, D... " />
-                <marker date="1471537255396" expanded="true" signature="3301:3302" ph="SELECT objec... current_games" />
+                <marker date="1471537480216" expanded="true" signature="275:334" ph="INSERT INTO current_games... " />
+                <marker date="1471537480216" expanded="true" signature="380:431" ph="SELECT objec... java_objects" />
+                <marker date="1471537480216" expanded="true" signature="480:531" ph="SELECT DISTI... current_games" />
+                <marker date="1471537480216" expanded="true" signature="3182:3249" ph="SELECT id, D... " />
+                <marker date="1471537480216" expanded="true" signature="3182:3250" ph="SELECT id, D... " />
+                <marker date="1471537480216" expanded="true" signature="3249:3250" ph="SELECT objec... current_games" />
               </folding>
             </state>
           </provider>
@@ -1014,14 +1013,7 @@
       <workItem from="1471168684159" duration="1219000" />
       <workItem from="1471251592970" duration="1138000" />
       <workItem from="1471267176061" duration="10112000" />
-      <workItem from="1471514607794" duration="14552000" />
-    </task>
-    <task id="LOCAL-00011" summary="port">
-      <created>1469699636713</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1469699636714</updated>
+      <workItem from="1471514607794" duration="14776000" />
     </task>
     <task id="LOCAL-00012" summary="Fix package">
       <created>1469701124338</created>
@@ -1359,11 +1351,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471536623501</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="time format">
+      <created>1471537288250</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1471537288251</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63369000" />
+    <option name="totallyTimeSpent" value="63593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -1416,7 +1415,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmMoveToFailedCommit value="2" />
-    <MESSAGE value="fix url" />
     <MESSAGE value="add test" />
     <MESSAGE value="all fix" />
     <MESSAGE value="LAST_INSERT_ID" />
@@ -1441,7 +1439,8 @@
     <MESSAGE value="Locale Europe/Kiev" />
     <MESSAGE value="fix SimpleDateFormat" />
     <MESSAGE value="add time" />
-    <option name="LAST_COMMIT_MESSAGE" value="add time" />
+    <MESSAGE value="time format" />
+    <option name="LAST_COMMIT_MESSAGE" value="time format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1807,16 +1806,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/db/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="112" column="69" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
+        <state relative-caret-position="144">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1471537255396" expanded="true" signature="327:386" ph="INSERT INTO current_games... " />
-            <marker date="1471537255396" expanded="true" signature="432:483" ph="SELECT objec... java_objects" />
-            <marker date="1471537255396" expanded="true" signature="532:583" ph="SELECT DISTI... current_games" />
-            <marker date="1471537255396" expanded="true" signature="3234:3301" ph="SELECT id, D... " />
-            <marker date="1471537255396" expanded="true" signature="3234:3302" ph="SELECT id, D... " />
-            <marker date="1471537255396" expanded="true" signature="3301:3302" ph="SELECT objec... current_games" />
+            <marker date="1471537480216" expanded="true" signature="275:334" ph="INSERT INTO current_games... " />
+            <marker date="1471537480216" expanded="true" signature="380:431" ph="SELECT objec... java_objects" />
+            <marker date="1471537480216" expanded="true" signature="480:531" ph="SELECT DISTI... current_games" />
+            <marker date="1471537480216" expanded="true" signature="3182:3249" ph="SELECT id, D... " />
+            <marker date="1471537480216" expanded="true" signature="3182:3250" ph="SELECT id, D... " />
+            <marker date="1471537480216" expanded="true" signature="3249:3250" ph="SELECT objec... current_games" />
           </folding>
         </state>
       </provider>
