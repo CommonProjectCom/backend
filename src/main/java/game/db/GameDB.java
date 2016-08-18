@@ -112,9 +112,9 @@ public class GameDB {
         statement.close();
         connection.close();
 
-        DateFormat dateFormat = new SimpleDateFormat(" hh:mm:ss dd.MM.yyyy");
+        DateFormat dateFormat = new SimpleDateFormat(" hh:mm:ss XXX dd.MM.yyyy");
         dateFormat.setLenient(true);
-        dateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Kiev"));
+//        dateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Kiev"));
         return "ID:" + id + " / " + "DATE:" + dateFormat.format(date) + " / " + "NAME:" + name;
     }
 
