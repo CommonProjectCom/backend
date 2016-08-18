@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.TimeZone;
 
@@ -111,9 +112,9 @@ public class GameDB {
         statement.close();
         connection.close();
 
-        DateFormat dateFormat = new SimpleDateFormat("z hh:mm:ss dd.MM.yyyy");
+        DateFormat dateFormat = new SimpleDateFormat(" hh:mm:ss dd.MM.yyyy");
         dateFormat.setLenient(true);
-        dateFormat.setTimeZone(TimeZone.getTimeZone("+02:00"));
+        dateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Kiev"));
         return "ID:" + id + " / " + "DATE:" + dateFormat.format(date) + " / " + "NAME:" + name;
     }
 
