@@ -17,8 +17,6 @@ import java.sql.SQLException;
 @WebServlet("/NewGame")
 public class NewGameServlet extends HttpServlet {
 
-    private static final long serialVersionUID = 1L;
-
     public NewGameServlet() {
         super();
     }

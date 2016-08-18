@@ -55,7 +55,6 @@ public class GameDB {
             preparedStatement.setString(1, clientName);
             preparedStatement.setObject(2, object);
             preparedStatement.executeUpdate();
-            gameID = 0;
             preparedStatement.execute(GET_LAST_INSERT_ID);
 
             ResultSet resultSet = preparedStatement.getResultSet();
@@ -84,6 +83,26 @@ public class GameDB {
         preparedStatement.close();
 
         return object;
+    }
+
+    public String getLastDateFromBD() throws Exception {
+        String str = "";
+        Statement statement = connection.createStatement();
+
+        statement.execute("SELECT id, date, name FROM  current_games ORDER BY  id DESC LIMIT 1");
+
+        ResultSet resultSet = statement.getResultSet();
+
+        while (resultSet.next()) {
+            str += "id   : " + resultSet.getInt("id") + "\n";
+            str += "date : " + resultSet.getDate("date") + "\n";
+            str += "name : " + resultSet.getString("name");
+        }
+
+        resultSet.close();
+        statement.close();
+
+        return str;
     }
 
 }
