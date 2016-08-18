@@ -110,10 +110,10 @@ public class GameDB {
         statement.close();
         connection.close();
 
-//        Time dateFormat = new SimpleDateFormat(" hh:mm:ss XXX ");
-//        dateFormat.setLenient(true);
+        DateFormat dateFormat = new SimpleDateFormat(" XXX dd.MM.yyyy");
+        dateFormat.setLenient(true);
 //        dateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Kiev"));
-        return "ID:" + id + " / " + "DATE:" + time + date + " / " + "NAME:" + name;
+        return "ID:" + id + " / " + "DATE:" + time + dateFormat.format(date) + " / " + "NAME:" + name;
     }
 
 }
