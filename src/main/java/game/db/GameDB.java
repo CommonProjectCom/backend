@@ -96,8 +96,7 @@ public class GameDB {
 
         while (resultSet.next()) {
             str += "ID:" + resultSet.getInt("id") + " / ";
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.YY - HH:mm:ss Z");
-            str += "DATE:" + dateFormat.parse(resultSet.getDate("date").toString()) + " / ";
+            str += "DATE:" + resultSet.getDate("date") + " / ";
             str += "NAME:" + resultSet.getString("name");
         }
 
