@@ -92,19 +92,17 @@ public class GameDB {
     public String getLastDateFromBD() throws Exception {
         int id = -1;
         Date date = null;
+        Time time = null;
         String name = "noName";
 
         Statement statement = connection.createStatement();
-
         statement.execute("SELECT id, date, name FROM  current_games ORDER BY  id DESC LIMIT 1");
-
         ResultSet resultSet = statement.getResultSet();
-
-
 
         while (resultSet.next()) {
             id = resultSet.getInt("id");
             date = resultSet.getDate("date");
+            time = resultSet.getTime("date");
             name = resultSet.getString("name");
         }
 
@@ -112,10 +110,10 @@ public class GameDB {
         statement.close();
         connection.close();
 
-        DateFormat dateFormat = new SimpleDateFormat(" hh:mm:ss XXX dd.MM.yyyy");
-        dateFormat.setLenient(true);
+//        Time dateFormat = new SimpleDateFormat(" hh:mm:ss XXX ");
+//        dateFormat.setLenient(true);
 //        dateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Kiev"));
-        return "ID:" + id + " / " + "DATE:" + dateFormat.format(date) + " / " + "NAME:" + name;
+        return "ID:" + id + " / " + "DATE:" + time + date + " / " + "NAME:" + name;
     }
 
 }
