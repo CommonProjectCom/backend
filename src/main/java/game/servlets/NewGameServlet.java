@@ -31,7 +31,7 @@ public class NewGameServlet extends HttpServlet {
 
         Goroda gogoda = new Goroda();
 
-        int gameID = -2;
+        int gameID;
 
         try {
             int length = request.getContentLength();
@@ -57,6 +57,8 @@ public class NewGameServlet extends HttpServlet {
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
         }
+
+        bd.disconnect();
     }
 
 }

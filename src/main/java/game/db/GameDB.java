@@ -1,7 +1,7 @@
 package game.db;
 
 import game.Goroda;
-
+import org.joda.time.DateTime;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -11,35 +11,35 @@ import java.util.Properties;
 
 public class GameDB {
 
-    static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(name, object_value) VALUES (?, ?)";
-    static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
-    static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
+    private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(name, object_value) VALUES (?, ?)";
+    private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
+    private static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
 
     private Connection connection;
-//    private static GameDB instance;
 
     public GameDB() {
         try {
-            isConnect();
+            setConnection();
         } catch (IOException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-//    public static GameDB getInstance() {
-//        if (instance == null)
-//            instance = new GameDB();
-//        return instance;
-//    }
-
-    private boolean isConnect() throws IOException, SQLException, ClassNotFoundException {
+    private void setConnection() throws IOException, SQLException, ClassNotFoundException {
         Properties properties = loadProperties();
         Class.forName("com.mysql.jdbc.Driver");
         connection = DriverManager.
                 getConnection(properties.getProperty("url"),
                         properties.getProperty("username"),
                         properties.getProperty("password"));
-        return true;
+    }
+
+    public void disconnect() {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private Properties loadProperties() throws IOException {
@@ -63,7 +63,6 @@ public class GameDB {
             if (resultSet.next()) {
                 gameID = resultSet.getInt("LAST_INSERT_ID()");
             }
-            connection.close();
             resultSet.close();
             preparedStatement.close();
         } catch (SQLException e) {
@@ -83,13 +82,12 @@ public class GameDB {
 
         resultSet.close();
         preparedStatement.close();
-        connection.close();
         return object;
     }
 
     public String getLastDateFromBD() throws Exception {
         int id = -1;
-        Timestamp time = null;
+        Timestamp date = null;
         String name = "noName";
 
         Statement statement = connection.createStatement();
@@ -98,17 +96,18 @@ public class GameDB {
 
         while (resultSet.next()) {
             id = resultSet.getInt("id");
-            time = resultSet.getTimestamp("date");
+            date = resultSet.getTimestamp("date");
             name = resultSet.getString("name");
         }
 
         resultSet.close();
         statement.close();
-        connection.close();
 
-        time.setHours(time.getHours() + 7);
+        DateTime dateTime = new DateTime(date);
+        dateTime.plusHours(7);
         DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy HH:mm ");
-        return "ID:" + id + " / " + dateFormat.format(time) + " / " + "NAME:" + name;
+
+        return "ID:" + id + " / " + dateFormat.format(dateTime) + " / " + "NAME:" + name;
     }
 
 }

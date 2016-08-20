@@ -40,6 +40,7 @@ public class TestServlet extends HttpServlet {
         try {
             GameDB bd = new GameDB();
             str = "<h2>" + bd.getLastDateFromBD() + "</h2>";
+            bd.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
         }
