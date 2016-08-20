@@ -1,7 +1,6 @@
 package game.servlets;
 
-import game.core.Core;
-import game.core.GameDB;
+import game.core.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
@@ -28,7 +27,7 @@ public class NewGameServlet extends HttpServlet {
 
         GameDB bd = new GameDB();
 
-        Core gogoda = new Core();
+        Game game = new Game();
 
         int gameID;
 
@@ -44,7 +43,7 @@ public class NewGameServlet extends HttpServlet {
 
             String hostName = new String(input);
 
-            gameID = bd.createGame(hostName, gogoda);
+            gameID = bd.createGame(hostName, game);
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());

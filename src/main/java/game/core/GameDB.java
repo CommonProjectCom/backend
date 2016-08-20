@@ -53,7 +53,7 @@ public class GameDB {
         return properties;
     }
 
-    public int createGame(String clientName, Core object) {
+    public int createGame(String clientName, Game object) {
 
         int gameID = -1;
 
