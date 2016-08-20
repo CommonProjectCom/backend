@@ -27,12 +27,10 @@ public class GameDB {
     private void setConnection() throws IOException, SQLException, ClassNotFoundException {
         Properties properties = loadProperties();
         Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.
-                getConnection(
-                    properties.getProperty("url"),
-                    properties.getProperty("username"),
-                    properties.getProperty("password")
-                );
+        connection = DriverManager
+                .getConnection(properties.getProperty("url"),
+                properties.getProperty("username"),
+                properties.getProperty("password"));
     }
 
     public void disconnect() {
@@ -47,7 +45,7 @@ public class GameDB {
     private Properties loadProperties() throws IOException {
 
         Properties properties = new Properties();
-        InputStream stream = getClass().getResourceAsStream("core.properties");
+        InputStream stream = getClass().getResourceAsStream("db.properties");
         properties.load(stream);
 
         return properties;
