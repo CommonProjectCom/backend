@@ -1,4 +1,4 @@
-package ua.in.dergachovda;
+package game.test;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

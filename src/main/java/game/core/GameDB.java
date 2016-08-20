@@ -1,6 +1,5 @@
-package game.db;
+package game.core;
 
-import game.Core;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
@@ -29,12 +28,15 @@ public class GameDB {
         Properties properties = loadProperties();
         Class.forName("com.mysql.jdbc.Driver");
         connection = DriverManager.
-                getConnection(properties.getProperty("url"),
-                        properties.getProperty("username"),
-                        properties.getProperty("password"));
+                getConnection(
+                    properties.getProperty("url"),
+                    properties.getProperty("username"),
+                    properties.getProperty("password")
+                );
     }
 
     public void disconnect() {
+
         try {
             connection.close();
         } catch (SQLException e) {
@@ -43,28 +45,33 @@ public class GameDB {
     }
 
     private Properties loadProperties() throws IOException {
+
         Properties properties = new Properties();
-        InputStream stream = getClass().getResourceAsStream("db.properties");
+        InputStream stream = getClass().getResourceAsStream("core.properties");
         properties.load(stream);
+
         return properties;
     }
 
     public int createGame(String clientName, Core object) {
+
         int gameID = -1;
-        PreparedStatement preparedStatement;
+
         try {
-            preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
+            PreparedStatement preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
             preparedStatement.setString(1, clientName);
             preparedStatement.setObject(2, object);
             preparedStatement.executeUpdate();
-            preparedStatement.execute(GET_LAST_INSERT_ID);
 
+            preparedStatement.execute(GET_LAST_INSERT_ID);
             ResultSet resultSet = preparedStatement.getResultSet();
             if (resultSet.next()) {
                 gameID = resultSet.getInt("LAST_INSERT_ID()");
             }
+
             resultSet.close();
             preparedStatement.close();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -88,6 +95,7 @@ public class GameDB {
 */
 
     public String[] getLastDateFromBD() throws Exception {
+
         String[] arr = new String[3];
         int id = -1;
         Timestamp date = null;
@@ -96,7 +104,6 @@ public class GameDB {
         Statement statement = connection.createStatement();
         statement.execute("SELECT id, date, name FROM  current_games ORDER BY  id DESC LIMIT 1");
         ResultSet resultSet = statement.getResultSet();
-
         while (resultSet.next()) {
             id = resultSet.getInt("id");
             date = resultSet.getTimestamp("date");
@@ -106,10 +113,8 @@ public class GameDB {
         resultSet.close();
         statement.close();
 
-        DateTime dateTime = new DateTime(date).toDateTime(DateTimeZone.forOffsetHours(3));
-
         arr[0] = "ID:" + id;
-        arr[1] = dateTime.toString();
+        arr[1] = new DateTime(date).toDateTime(DateTimeZone.forOffsetHours(3)).toString();
         arr[2] = "NAME:" + name;
 
         return arr;

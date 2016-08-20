@@ -1,6 +1,6 @@
-package game.servlets;
+package game.test;
 
-import game.db.GameDB;
+import game.core.GameDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/test")
+@WebServlet("/game/trash/test")
 public class TestServlet extends HttpServlet {
 
     public TestServlet() {

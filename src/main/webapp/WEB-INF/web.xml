@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>Welcome Servlet</servlet-name>
-        <servlet-class>ua.in.dergachovda.WelcomeServlet</servlet-class>
+        <servlet-class>game.test.WelcomeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Welcome Servlet</servlet-name>

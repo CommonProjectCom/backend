@@ -1,4 +1,4 @@
-package game.servlets;
+package game.test;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;

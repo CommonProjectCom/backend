@@ -1,7 +1,7 @@
 package game.servlets;
 
-import game.Core;
-import game.db.GameDB;
+import game.core.Core;
+import game.core.GameDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
