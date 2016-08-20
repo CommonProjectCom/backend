@@ -2,6 +2,9 @@ package game.db;
 
 import game.Goroda;
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimePrinter;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -105,9 +108,7 @@ public class GameDB {
 
         DateTime dateTime = new DateTime(date);
         dateTime.plusHours(7);
-        DateFormat dateFormat = new SimpleDateFormat(" dd.MM.yyyy HH:mm ");
-
-        return "ID:" + id + " \n " + dateFormat.format(dateTime) + " \n " + "NAME:" + name;
+        return "ID:" + id + " \n " + dateTime + " \n " + "NAME:" + name;
     }
 
 }
