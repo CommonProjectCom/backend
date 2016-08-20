@@ -1,6 +1,6 @@
 package game.servlets;
 
-import game.Goroda;
+import game.Core;
 import game.db.GameDB;
 
 import javax.servlet.ServletException;
@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.sql.SQLException;
 
 
 @WebServlet("/NewGame")
@@ -29,7 +28,7 @@ public class NewGameServlet extends HttpServlet {
 
         GameDB bd = new GameDB();
 
-        Goroda gogoda = new Goroda();
+        Core gogoda = new Core();
 
         int gameID;
 

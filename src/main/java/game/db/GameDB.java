@@ -1,21 +1,18 @@
 package game.db;
 
-import game.Goroda;
+import game.Core;
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormatter;
-import org.joda.time.format.DateTimePrinter;
+import org.joda.time.DateTimeZone;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Properties;
 
 public class GameDB {
 
     private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(name, object_value) VALUES (?, ?)";
-    private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
+//    private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
     private static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
 
     private Connection connection;
@@ -52,7 +49,7 @@ public class GameDB {
         return properties;
     }
 
-    public int createGame(String clientName, Goroda object) {
+    public int createGame(String clientName, Core object) {
         int gameID = -1;
         PreparedStatement preparedStatement;
         try {
@@ -75,20 +72,23 @@ public class GameDB {
         return gameID;
     }
 
-    public Goroda readGorodaFromBD(int id) throws Exception {
+/*
+    public Core readDataFromBD(int id) throws Exception {
         PreparedStatement preparedStatement = connection.prepareStatement(READ_OBJECT_SQL);
         preparedStatement.setLong(1, id);
 
         ResultSet resultSet = preparedStatement.executeQuery();
         resultSet.next();
-        Goroda object = (Goroda) resultSet.getObject(1);
+        Core object = (Core) resultSet.getObject(1);
 
         resultSet.close();
         preparedStatement.close();
         return object;
     }
+*/
 
-    public String getLastDateFromBD() throws Exception {
+    public String[] getLastDateFromBD() throws Exception {
+        String[] arr = new String[3];
         int id = -1;
         Timestamp date = null;
         String name = "noName";
@@ -106,9 +106,13 @@ public class GameDB {
         resultSet.close();
         statement.close();
 
-        DateTime dateTime = new DateTime(date);
-        dateTime.plusHours(7);
-        return "ID:" + id + " \n " + dateTime + " \n " + "NAME:" + name;
+        DateTime dateTime = new DateTime(date).toDateTime(DateTimeZone.forOffsetHours(3));
+
+        arr[0] = "ID:" + id;
+        arr[1] = dateTime.toString();
+        arr[2] = "NAME:" + name;
+
+        return arr;
     }
 
 }

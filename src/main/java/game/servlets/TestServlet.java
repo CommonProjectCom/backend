@@ -35,16 +35,20 @@ public class TestServlet extends HttpServlet {
     }
 
     private String getLastDateFromTable() {
-        String str = "";
+        String out = "";
 
         try {
             GameDB bd = new GameDB();
-            str = bd.getLastDateFromBD();
+
+            for (String s : bd.getLastDateFromBD()) {
+                out += s + "<br>";
+            }
+
             bd.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        str = "<p>" + str + "</p>";
-        return str;
+
+        return out;
     }
 }
