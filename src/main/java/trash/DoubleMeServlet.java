@@ -1,4 +1,4 @@
-package test;
+package trash;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;

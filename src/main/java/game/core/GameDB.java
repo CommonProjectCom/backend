@@ -10,7 +10,9 @@ import java.util.Properties;
 
 public class GameDB {
 
-    private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(name, object_value) VALUES (?, ?)";
+    private static final String WRITE_NEW_GAME_SQL = "INSERT INTO current_games(name) VALUES (?)";
+    private static final String UPDATE_OBJECT_SQL = "UPDATE current_games SET object_value = ? WHERE id = ?";
+//    private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(id, object_value) VALUES (?, ?)";
 //    private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
     private static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
 
@@ -29,8 +31,8 @@ public class GameDB {
         Class.forName("com.mysql.jdbc.Driver");
         connection = DriverManager
                 .getConnection(properties.getProperty("url"),
-                properties.getProperty("username"),
-                properties.getProperty("password"));
+                        properties.getProperty("username"),
+                        properties.getProperty("password"));
     }
 
     public void disconnect() {
@@ -51,14 +53,13 @@ public class GameDB {
         return properties;
     }
 
-    public int createGame(String clientName, Game object) {
+    public int createGame(String clientName) {
 
         int gameID = -1;
 
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(WRITE_OBJECT_SQL);
+            PreparedStatement preparedStatement = connection.prepareStatement(WRITE_NEW_GAME_SQL);
             preparedStatement.setString(1, clientName);
-            preparedStatement.setObject(2, object);
             preparedStatement.executeUpdate();
 
             preparedStatement.execute(GET_LAST_INSERT_ID);
@@ -75,6 +76,20 @@ public class GameDB {
         }
 
         return gameID;
+    }
+
+    public void updateGame(int gameID) {
+        Game game = new Game(gameID);
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_OBJECT_SQL);
+            preparedStatement.setObject(1, game);
+            preparedStatement.setInt(2, gameID);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 /*

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - mytomcatapp@127.11.197.2" uuid="87339d01-2989-4dde-ae07-d82c11d1d2c3">
+      <secret-storage>master_key</secret-storage>
+      <user-name>adminvxL25H2</user-name>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>mytomcatapp-dergachovda.rhcloud.com</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>57973ff47628e106b8000189</user>
+        <use-password>false</use-password>
+        <private-key-path>$USER_HOME$/.ssh/id_rsa</private-key-path>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>

@@ -27,8 +27,6 @@ public class NewGameServlet extends HttpServlet {
 
         GameDB bd = new GameDB();
 
-        Game game = new Game();
-
         int gameID;
 
         try {
@@ -43,7 +41,11 @@ public class NewGameServlet extends HttpServlet {
 
             String hostName = new String(input);
 
-            gameID = bd.createGame(hostName, game);
+            gameID = bd.createGame(hostName);
+
+            if (gameID > 0) {
+                bd.updateGame(gameID);
+            }
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
