@@ -44,7 +44,7 @@ public class NewGameServlet extends HttpServlet {
             gameID = bd.createGame(hostName);
 
             if (gameID > 0) {
-                bd.updateGame(gameID);
+                bd.updateGame(new Game(gameID));
             }
 
             response.setStatus(HttpServletResponse.SC_OK);

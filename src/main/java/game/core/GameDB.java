@@ -13,7 +13,7 @@ public class GameDB {
     private static final String WRITE_NEW_GAME_SQL = "INSERT INTO current_games(name) VALUES (?)";
     private static final String UPDATE_OBJECT_SQL = "UPDATE current_games SET object_value = ? WHERE id = ?";
 //    private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(id, object_value) VALUES (?, ?)";
-//    private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
+    private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
     private static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
 
     private Connection connection;
@@ -78,8 +78,8 @@ public class GameDB {
         return gameID;
     }
 
-    public void updateGame(int gameID) {
-        Game game = new Game(gameID);
+    public void updateGame(Game game) {
+        int gameID = game.getID();
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_OBJECT_SQL);
@@ -92,20 +92,27 @@ public class GameDB {
         }
     }
 
-/*
-    public Core readDataFromBD(int id) throws Exception {
-        PreparedStatement preparedStatement = connection.prepareStatement(READ_OBJECT_SQL);
-        preparedStatement.setLong(1, id);
 
-        ResultSet resultSet = preparedStatement.executeQuery();
-        resultSet.next();
-        Core object = (Core) resultSet.getObject(1);
+    public Game getGame(int id) {
+        Game game = null;
 
-        resultSet.close();
-        preparedStatement.close();
-        return object;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(READ_OBJECT_SQL);
+            preparedStatement.setLong(1, id);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+            game = (Game) resultSet.getObject(1);
+
+            resultSet.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return game;
     }
-*/
+
 
     public String[] getLastDateFromBD() throws Exception {
 

@@ -18,4 +18,8 @@ public class Game implements Serializable {
     public boolean move(int move) {
         return !history.add(move);
     }
+
+    public int getID() {
+        return id;
+    }
 }
