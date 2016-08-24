@@ -29,7 +29,6 @@ public class MoveServlet extends HttpServlet {
         GameDB bd = new GameDB();
         int gameID = 0;
         Game game;
-        Parameter param;
 
         try {
             int length = request.getContentLength();
@@ -41,24 +40,25 @@ public class MoveServlet extends HttpServlet {
             }
             sin.close();
 
-            param = new Parameter(new String(input));
+            Parameter param = new Parameter(10, "state", "move", "name");
 
 //            String input = getInput(request);
 //            param = new Parameter(input);
-            gameID = param.getGameID();
+
+            /*gameID = param.getGameID();
 
             if (gameID > 0) {
                 game = bd.getGame(gameID);
                 game.setMove(param.getMove());
                 bd.updateGame(game);
-            }
+            }*/
 
             param.setMove("Test");
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-//            writer.write(param.toString());
-            writer.write("Move response test");
+            writer.write(param.toString());
+//            writer.write("Move response test");
             writer.flush();
             writer.close();
 
