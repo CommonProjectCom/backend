@@ -41,22 +41,21 @@ public class MoveServlet extends HttpServlet {
             sin.close();
             String recievedString = new String(input);
 
-            Parameter param = new Parameter(184, "state", "move", "name");
-//            Parameter param = new Parameter(recievedString);
+            Parameter param = new Parameter(recievedString);
+            param.setMove("Test");
 
+            /*
             gameID = param.getGameID();
-
-            /*if (gameID > 0) {
+            if (gameID > 0) {
                 game = bd.getGame(gameID);
                 game.setMove(param.getMove());
                 bd.updateGame(game);
-            }*/
-
-//            param.setMove("Test");
+            }
+            */
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-            writer.write(param.getMove() + gameID);
+            writer.write(param.toString());
             writer.flush();
             writer.close();
 

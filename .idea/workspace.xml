@@ -99,8 +99,8 @@
       <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+            <state relative-caret-position="333">
+              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -188,8 +188,8 @@
       <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
+            <state relative-caret-position="97">
+              <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1472027453778" expanded="true" signature="297:339" ph="INSERT INTO current_games... " />
@@ -937,14 +937,7 @@
       <workItem from="1471682113196" duration="14761000" />
       <workItem from="1471861475728" duration="4719000" />
       <workItem from="1471866304748" duration="8890000" />
-      <workItem from="1472023676894" duration="13393000" />
-    </task>
-    <task id="LOCAL-00043" summary="fix READ_OBJECT_SQL">
-      <created>1471272101582</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1471272101582</updated>
+      <workItem from="1472023676894" duration="13669000" />
     </task>
     <task id="LOCAL-00044" summary="fix">
       <created>1471273920666</created>
@@ -1282,11 +1275,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472040700083</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="test">
+      <created>1472040994171</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1472040994171</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111609000" />
+    <option name="totallyTimeSpent" value="111885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -1600,23 +1600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1472027453778" expanded="true" signature="297:339" ph="INSERT INTO current_games... " />
-            <marker date="1472027453778" expanded="true" signature="395:449" ph="UPDATE curre... " />
-            <marker date="1472027453778" expanded="true" signature="510:567" ph="INSERT INTO current_games... " />
-            <marker date="1472027453778" expanded="true" signature="621:672" ph="SELECT objec... current_games" />
-            <marker date="1472027453778" expanded="true" signature="729:780" ph="SELECT DISTI... current_games" />
-            <marker date="1472027453778" expanded="true" signature="2051:2078" ph="SELECT 'name... " />
-            <marker date="1472027453778" expanded="true" signature="4501:4568" ph="SELECT id, d... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
@@ -1689,11 +1672,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/test/StringServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="56" />
-          <folding />
+        <state relative-caret-position="97">
+          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1472027453778" expanded="true" signature="297:339" ph="INSERT INTO current_games... " />
+            <marker date="1472027453778" expanded="true" signature="395:449" ph="UPDATE curre... " />
+            <marker date="1472027453778" expanded="true" signature="510:567" ph="INSERT INTO current_games... " />
+            <marker date="1472027453778" expanded="true" signature="621:672" ph="SELECT objec... current_games" />
+            <marker date="1472027453778" expanded="true" signature="729:780" ph="SELECT DISTI... current_games" />
+            <marker date="1472027453778" expanded="true" signature="2051:2078" ph="SELECT 'name... " />
+            <marker date="1472027453778" expanded="true" signature="4501:4568" ph="SELECT id, d... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1710,10 +1702,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/test/StringServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        <state relative-caret-position="333">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
           <folding />
         </state>
       </provider>
