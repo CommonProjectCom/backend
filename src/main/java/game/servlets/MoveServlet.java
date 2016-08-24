@@ -47,7 +47,8 @@ public class MoveServlet extends HttpServlet {
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-            writer.write(param.toString());
+//            writer.write(param.toString());
+            writer.write("Move response test");
             writer.flush();
             writer.close();
 
