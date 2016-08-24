@@ -38,8 +38,8 @@ public class MoveServlet extends HttpServlet {
 
             if (gameID > 0) {
                 game = bd.getGame(gameID);
-                int cityID = bd.getCityID(param.getMove());
-                game.move(cityID);
+//                int cityID = bd.getCityID(param.getMove());
+                game.setMove(param.getMove());
                 bd.updateGame(game);
             }
 
