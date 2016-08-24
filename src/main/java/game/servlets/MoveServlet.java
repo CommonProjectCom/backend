@@ -39,19 +39,21 @@ public class MoveServlet extends HttpServlet {
                 count += c;
             }
             sin.close();
+            String recievedString = new String(input);
 
-            Parameter param = new Parameter(10, "state", "move", "name");
+//            Parameter param = new Parameter(10, "state", "move", "name");
 
 //            String input = getInput(request);
-//            param = new Parameter(input);
 
-            /*gameID = param.getGameID();
+            Parameter param = new Parameter(recievedString);
+
+            gameID = param.getGameID();
 
             if (gameID > 0) {
                 game = bd.getGame(gameID);
                 game.setMove(param.getMove());
                 bd.updateGame(game);
-            }*/
+            }
 
             param.setMove("Test");
 

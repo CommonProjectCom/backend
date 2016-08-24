@@ -7,16 +7,23 @@ public class Parameter {
     static final String NAME = "Name";
     static final String MOVE = "Move";
 
-    private int id;
-    private String state;
-    private String move;
-    private String name;
+    private int id = 0;
+    private String state = null;
+    private String move = null;
+    private String name = null;
 
     public Parameter(int id, String state, String move, String name) {
         this.id = id;
         this.state = state;
         this.move = move;
         this.name = name;
+    }
+
+    public Parameter(String input) {
+        String[] strings = input.split("@");
+        for (String value : strings) {
+            setValue(value);
+        }
     }
 
     @Override
@@ -28,13 +35,6 @@ public class Parameter {
                 "Move:"  + move +
                 "@" +
                 "Name:"  + name;
-    }
-
-    public Parameter(String input) {
-        String[] strings = input.split("@");
-        for (String value : strings) {
-            setValue(value);
-        }
     }
 
     private void setValue(String input) {
