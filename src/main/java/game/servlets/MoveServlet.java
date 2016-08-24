@@ -45,7 +45,11 @@ public class MoveServlet extends HttpServlet {
 
             param.setMove("Test");
 
-            setOutput(param.toString(), response);
+            response.setStatus(HttpServletResponse.SC_OK);
+            OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
+            writer.write(param.toString());
+            writer.flush();
+            writer.close();
 
         } catch (IOException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
@@ -67,13 +71,4 @@ public class MoveServlet extends HttpServlet {
         servletInputStream.close();
         return new String(input);
     }
-
-    private void setOutput(String output, HttpServletResponse response) throws IOException {
-        response.setStatus(HttpServletResponse.SC_OK);
-        OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-        writer.write(output);
-        writer.flush();
-        writer.close();
-    }
-
 }
