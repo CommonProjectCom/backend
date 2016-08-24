@@ -42,7 +42,7 @@ public class MoveServlet extends HttpServlet {
             String recievedString = new String(input);
 
             Parameter param = new Parameter(recievedString);
-            param.setMove("Test");
+            param.setMove(param.getMove() + " Test OK");
 
             /*
             gameID = param.getGameID();
