@@ -9,11 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
-
 @WebServlet("/String")
 public class StringServlet extends HttpServlet {
-
-    private static final long serialVersionUID = 1L;
 
     public StringServlet() {
         super();
@@ -26,16 +23,16 @@ public class StringServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try {
-            int length = request.getContentLength();
+            /*int length = request.getContentLength();
             byte[] input = new byte[length];
             ServletInputStream sin = request.getInputStream();
             int c, count = 0;
             while ((c = sin.read(input, count, input.length - count)) != -1) {
                 count += c;
             }
-            sin.close();
-
-            String recievedString = new String(input);
+            sin.close();*/
+            String recievedString = getInput(request);
+//            String recievedString = new String(input);
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
 
@@ -50,6 +47,18 @@ public class StringServlet extends HttpServlet {
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
         }
+    }
+
+    private String getInput(HttpServletRequest request) throws IOException {
+        int length = request.getContentLength();
+        byte[] input = new byte[length];
+        ServletInputStream servletInputStream = request.getInputStream();
+        int c, count = 0;
+        while ((c = servletInputStream.read(input, count, input.length - count)) != -1) {
+            count += c;
+        }
+        servletInputStream.close();
+        return new String(input);
     }
 
 }
