@@ -45,17 +45,18 @@ public class MoveServlet extends HttpServlet {
 //            Parameter param = new Parameter(recievedString);
 
             gameID = param.getGameID();
-            if (gameID > 0) {
+
+            /*if (gameID > 0) {
                 game = bd.getGame(gameID);
                 game.setMove(param.getMove());
                 bd.updateGame(game);
-            }
+            }*/
 
 //            param.setMove("Test");
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-            writer.write(param.getMove() + param.getGameID());
+            writer.write(param.getMove() + gameID);
             writer.flush();
             writer.close();
 
