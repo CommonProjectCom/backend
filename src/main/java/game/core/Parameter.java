@@ -80,7 +80,7 @@ public class Parameter {
     }
 
     private void setId(String id) {
-        this.id = Integer.getInteger(id);
+        this.id = Integer.valueOf(id);
     }
 
     private void setState(String state) {

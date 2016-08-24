@@ -10,6 +10,7 @@ public class Game implements Serializable {
     private Set<Integer> history;
     private int gameID;
     private Map<Character, Set<String>> data;
+    private String currentMove;
 
 
     public Game(int id, GameDB db) {
