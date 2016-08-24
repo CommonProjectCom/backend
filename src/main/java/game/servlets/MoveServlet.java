@@ -27,23 +27,22 @@ public class MoveServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         GameDB bd = new GameDB();
-        int gameID;
+        int gameID = 0;
         Game game;
         Parameter param;
 
         try {
-            String input = getInput(request);
+            /*String input = getInput(request);
             param = new Parameter(input);
             gameID = param.getGameID();
 
             if (gameID > 0) {
                 game = bd.getGame(gameID);
-//                int cityID = bd.getCityID(param.getMove());
                 game.setMove(param.getMove());
                 bd.updateGame(game);
             }
 
-            param.setMove("Test");
+            param.setMove("Test");*/
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
