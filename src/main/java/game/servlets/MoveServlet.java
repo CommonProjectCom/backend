@@ -32,8 +32,19 @@ public class MoveServlet extends HttpServlet {
         Parameter param;
 
         try {
-            /*String input = getInput(request);
-            param = new Parameter(input);
+            int length = request.getContentLength();
+            byte[] input = new byte[length];
+            ServletInputStream sin = request.getInputStream();
+            int c, count = 0;
+            while ((c = sin.read(input, count, input.length - count)) != -1) {
+                count += c;
+            }
+            sin.close();
+
+            param = new Parameter(new String(input));
+
+//            String input = getInput(request);
+//            param = new Parameter(input);
             gameID = param.getGameID();
 
             if (gameID > 0) {
@@ -42,7 +53,7 @@ public class MoveServlet extends HttpServlet {
                 bd.updateGame(game);
             }
 
-            param.setMove("Test");*/
+            param.setMove("Test");
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
@@ -60,7 +71,7 @@ public class MoveServlet extends HttpServlet {
         bd.disconnect();
     }
 
-    private String getInput(HttpServletRequest request) throws IOException {
+/*    private String getInput(HttpServletRequest request) throws IOException {
         int length = request.getContentLength();
         byte[] input = new byte[length];
         ServletInputStream servletInputStream = request.getInputStream();
@@ -70,5 +81,5 @@ public class MoveServlet extends HttpServlet {
         }
         servletInputStream.close();
         return new String(input);
-    }
+    }*/
 }
