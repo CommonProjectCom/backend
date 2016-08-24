@@ -25,7 +25,7 @@ public class NewGameServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        GameDB bd = new GameDB();
+        GameDB db = new GameDB();
 
         int gameID;
 
@@ -41,10 +41,10 @@ public class NewGameServlet extends HttpServlet {
 
             String hostName = new String(input);
 
-            gameID = bd.createGame(hostName);
+            gameID = db.createGame(hostName);
 
             if (gameID > 0) {
-                bd.updateGame(new Game(gameID));
+                db.updateGame(new Game(gameID, db));
             }
 
             response.setStatus(HttpServletResponse.SC_OK);
@@ -58,7 +58,7 @@ public class NewGameServlet extends HttpServlet {
             response.getWriter().close();
         }
 
-        bd.disconnect();
+        db.disconnect();
     }
 
 }

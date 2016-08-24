@@ -6,15 +6,17 @@ import org.joda.time.DateTimeZone;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class GameDB {
 
     private static final String WRITE_NEW_GAME_SQL = "INSERT INTO current_games(name) VALUES (?)";
     private static final String UPDATE_OBJECT_SQL = "UPDATE current_games SET object_value = ? WHERE id = ?";
-//    private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(id, object_value) VALUES (?, ?)";
+    //    private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(id, object_value) VALUES (?, ?)";
     private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
     private static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
+
 
     private Connection connection;
 
@@ -53,6 +55,31 @@ public class GameDB {
         return properties;
     }
 
+    public int getCityID(String city) {
+        int id = -1;
+        return id;
+    }
+
+    public ArrayList<String> getData() {
+        ArrayList<String> cities = new ArrayList<>();
+
+        String sql = "SELECT 'name' FROM 'cities'";
+
+        try {
+            Statement statement = connection.createStatement();
+            statement.execute(sql);
+            ResultSet resultSet = statement.getResultSet();
+            while (resultSet.next()) {
+                String city = resultSet.getString("name");
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return cities;
+    }
+
     public int createGame(String clientName) {
 
         int gameID = -1;
@@ -79,7 +106,7 @@ public class GameDB {
     }
 
     public void updateGame(Game game) {
-        int gameID = game.getID();
+        int gameID = game.getGameID();
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_OBJECT_SQL);
