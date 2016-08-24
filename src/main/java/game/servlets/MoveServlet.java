@@ -41,26 +41,21 @@ public class MoveServlet extends HttpServlet {
             sin.close();
             String recievedString = new String(input);
 
-//            Parameter param = new Parameter(10, "state", "move", "name");
-
-//            String input = getInput(request);
-
-            Parameter param = new Parameter(recievedString);
+            Parameter param = new Parameter(184, "state", "move", "name");
+//            Parameter param = new Parameter(recievedString);
 
             gameID = param.getGameID();
-
             if (gameID > 0) {
                 game = bd.getGame(gameID);
                 game.setMove(param.getMove());
                 bd.updateGame(game);
             }
 
-            param.setMove("Test");
+//            param.setMove("Test");
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-            writer.write(param.toString());
-//            writer.write("Move response test");
+            writer.write(param.getMove() + param.getGameID());
             writer.flush();
             writer.close();
 
@@ -72,16 +67,4 @@ public class MoveServlet extends HttpServlet {
 
         bd.disconnect();
     }
-
-/*    private String getInput(HttpServletRequest request) throws IOException {
-        int length = request.getContentLength();
-        byte[] input = new byte[length];
-        ServletInputStream servletInputStream = request.getInputStream();
-        int c, count = 0;
-        while ((c = servletInputStream.read(input, count, input.length - count)) != -1) {
-            count += c;
-        }
-        servletInputStream.close();
-        return new String(input);
-    }*/
 }
