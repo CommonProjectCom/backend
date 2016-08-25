@@ -123,34 +123,26 @@ public class GameDB {
     }
 
 
-    public Game getGame(int id) {
+    public Game getGame(int id) throws SQLException, IOException, ClassNotFoundException {
         Game game = null;
 
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(READ_OBJECT_SQL);
-            preparedStatement.setLong(1, id);
+        PreparedStatement preparedStatement = connection.prepareStatement(READ_OBJECT_SQL);
+        preparedStatement.setLong(1, id);
 
-            ResultSet resultSet = preparedStatement.executeQuery();
-            resultSet.next();
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
 
-            byte[] buf = resultSet.getBytes(1);
-            ObjectInputStream objectIn = null;
-            if (buf != null)
-                objectIn = new ObjectInputStream(new ByteArrayInputStream(buf));
+        byte[] buf = resultSet.getBytes(1);
+        ObjectInputStream objectIn = null;
+        if (buf != null)
+            objectIn = new ObjectInputStream(new ByteArrayInputStream(buf));
 
-            Object deSerializedObject = objectIn.readObject();
+        Object deSerializedObject = objectIn.readObject();
 
-            game = (Game) deSerializedObject;
+        game = (Game) deSerializedObject;
 
-            resultSet.close();
-            preparedStatement.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        resultSet.close();
+        preparedStatement.close();
 
         return game;
     }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.sql.SQLException;
 
 @WebServlet("/move")
 public class MoveServlet extends HttpServlet {
@@ -59,7 +60,7 @@ public class MoveServlet extends HttpServlet {
             writer.flush();
             writer.close();
 
-        } catch (IOException e) {
+        } catch (IOException | SQLException | ClassNotFoundException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();

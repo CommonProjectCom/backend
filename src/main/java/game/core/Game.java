@@ -6,6 +6,7 @@ import java.util.*;
 public class Game implements Serializable {
     private static final long serialVersionUID = 1L;
     private static final String NO_SUCH = "НЕТ ТАКОГО ГОРОДА ИЛИ ОН УЖЕ УПОМИНАЛСЯ";
+    private static final String ERROR_MOVE = "НЕ ВЕРНЫЙ ХОД";
 
     private Set<Integer> history;
     private int gameID;
@@ -32,6 +33,9 @@ public class Game implements Serializable {
 
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
+
+        if (currentMove.charAt(currentMove.length() - 1) != firstChar)
+            return ERROR_MOVE;
 
         if (!data.get(firstChar).contains(move))
             return NO_SUCH;
