@@ -4,8 +4,11 @@
     <list id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="bd.disconnect" />
     <list id="01078dcb-bdab-43b6-ba49-fcd677d864af" name="Rejected commit: Default" comment="test" />
     <list id="52c3d324-b5b7-4c4f-bbbd-b25726b54e90" name="Rejected commit: Default (2)" comment="DISTINCT" />
-    <list default="true" id="5eb2d882-1be9-46af-b166-7fa62179e083" name="Rejected commit: Default (3)" comment="fix">
+    <list default="true" id="5eb2d882-1be9-46af-b166-7fa62179e083" name="Rejected commit: Default (3)" comment="Move TEST OK">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/core/Game.java" afterPath="$PROJECT_DIR$/src/main/java/game/core/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/core/GameDB.java" afterPath="$PROJECT_DIR$/src/main/java/game/core/GameDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java" afterPath="$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java" />
     </list>
     <list id="69b589ac-0f62-4aac-9b0d-7c46d6b17834" name="Rejected commit: Rejected commit: Default (3)" comment="updateGame" />
     <ignored path="mytomcatapp.iws" />
@@ -77,10 +80,11 @@
       <file leaf-file-name="NewGameServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="882">
               <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#469#470#0" expanded="false" />
+                <element signature="e#492#493#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -96,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="279">
+              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -109,9 +113,13 @@
       <file leaf-file-name="StringServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/test/StringServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
+            <state relative-caret-position="450">
               <caret line="34" column="56" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="56" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#440#441#0" expanded="false" />
+                <element signature="e#463#464#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,27 +137,35 @@
       <file leaf-file-name="Parameter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Parameter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-108">
+            <state relative-caret-position="216">
               <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
               <folding>
-                <element signature="e#1903#1904#0" expanded="true" />
-                <element signature="e#1935#1936#0" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="false" />
+                <element signature="e#1458#1459#0" expanded="false" />
+                <element signature="e#1488#1489#0" expanded="false" />
+                <element signature="e#1513#1514#0" expanded="false" />
+                <element signature="e#1545#1546#0" expanded="false" />
+                <element signature="e#1573#1574#0" expanded="false" />
+                <element signature="e#1604#1605#0" expanded="false" />
+                <element signature="e#1631#1632#0" expanded="false" />
+                <element signature="e#1672#1673#0" expanded="false" />
+                <element signature="e#1704#1705#0" expanded="false" />
+                <element signature="e#1741#1742#0" expanded="false" />
+                <element signature="e#1786#1787#0" expanded="false" />
+                <element signature="e#1829#1830#0" expanded="false" />
+                <element signature="e#1863#1864#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="126">
+              <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#635#636#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
-                <element signature="e#695#696#0" expanded="true" />
-                <element signature="e#724#725#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,17 +204,17 @@
       <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+            <state relative-caret-position="383">
+              <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1472027453778" expanded="true" signature="297:339" ph="INSERT INTO current_games... " />
-                <marker date="1472027453778" expanded="true" signature="395:449" ph="UPDATE curre... " />
-                <marker date="1472027453778" expanded="true" signature="510:567" ph="INSERT INTO current_games... " />
-                <marker date="1472027453778" expanded="true" signature="621:672" ph="SELECT objec... current_games" />
-                <marker date="1472027453778" expanded="true" signature="729:780" ph="SELECT DISTI... current_games" />
-                <marker date="1472027453778" expanded="true" signature="2051:2078" ph="SELECT 'name... " />
-                <marker date="1472027453778" expanded="true" signature="4501:4568" ph="SELECT id, d... " />
+                <marker date="1472113027912" expanded="true" signature="368:410" ph="INSERT INTO current_games... " />
+                <marker date="1472113027912" expanded="true" signature="466:520" ph="UPDATE curre... " />
+                <marker date="1472113027912" expanded="true" signature="581:638" ph="INSERT INTO current_games... " />
+                <marker date="1472113027912" expanded="true" signature="692:743" ph="SELECT objec... current_games" />
+                <marker date="1472113027912" expanded="true" signature="800:851" ph="SELECT DISTI... current_games" />
+                <marker date="1472113027912" expanded="true" signature="2122:2149" ph="SELECT 'name... " />
+                <marker date="1472113027912" expanded="true" signature="4984:5051" ph="SELECT id, d... " />
               </folding>
             </state>
           </provider>
@@ -271,14 +287,14 @@
         <option value="$PROJECT_DIR$/src/main/java/game/core/Core.java" />
         <option value="dbtable:/8713e7ea/87339d01-2989-4dde-ae07-d82c11d1d2c3/game.current_games" />
         <option value="$PROJECT_DIR$/src/main/java/game/core/Parser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/core/GameDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/game/core/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/test/MoveTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/game/test/StringServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/core/Parameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/core/GameDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/core/Game.java" />
       </list>
     </option>
   </component>
@@ -380,6 +396,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -411,8 +430,22 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="mytomcatapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mytomcatapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -429,12 +462,73 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mytomcatapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mytomcatapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mytomcatapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mytomcatapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,7 +595,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -524,7 +621,10 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -937,14 +1037,8 @@
       <workItem from="1471682113196" duration="14761000" />
       <workItem from="1471861475728" duration="4719000" />
       <workItem from="1471866304748" duration="8890000" />
-      <workItem from="1472023676894" duration="13866000" />
-    </task>
-    <task id="LOCAL-00045" summary="PreparedStatement.RETURN_GENERATED_KEYS">
-      <created>1471274278716</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1471274278717</updated>
+      <workItem from="1472023676894" duration="14581000" />
+      <workItem from="1472109798106" duration="2040000" />
     </task>
     <task id="LOCAL-00046" summary="Deploy">
       <created>1471274858400</created>
@@ -1282,15 +1376,22 @@
       <option name="project" value="LOCAL" />
       <updated>1472041180313</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Move TEST OK">
+      <created>1472041394532</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1472041394534</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112082000" />
+    <option name="totallyTimeSpent" value="114837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1298,7 +1399,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32586786" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3195739" sideWeight="0.5103359" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3195739" sideWeight="0.48966408" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3195739" sideWeight="0.48966408" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756326" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1310,12 +1411,12 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25710595" sideWeight="0.5069307" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15891473" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1340,7 +1441,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmMoveToFailedCommit value="2" />
-    <MESSAGE value="add object" />
     <MESSAGE value="fix Serializable" />
     <MESSAGE value="fix try" />
     <MESSAGE value="fix READ_OBJECT_SQL" />
@@ -1365,7 +1465,8 @@
     <MESSAGE value="Move response test" />
     <MESSAGE value="test" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="Move TEST OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move TEST OK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1407,7 +1508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1437,7 +1537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1561,9 +1660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1578,7 +1674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,21 +1691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="71" selection-start-line="0" selection-start-column="71" selection-end-line="0" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1637,22 +1717,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/NewGameServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state relative-caret-position="882">
           <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#469#470#0" expanded="false" />
+            <element signature="e#492#493#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/test/MoveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/test/MoveTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1663,28 +1737,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Parameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
+        <state relative-caret-position="216">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
           <folding>
-            <element signature="e#1903#1904#0" expanded="true" />
-            <element signature="e#1935#1936#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1472027453778" expanded="true" signature="297:339" ph="INSERT INTO current_games... " />
-            <marker date="1472027453778" expanded="true" signature="395:449" ph="UPDATE curre... " />
-            <marker date="1472027453778" expanded="true" signature="510:567" ph="INSERT INTO current_games... " />
-            <marker date="1472027453778" expanded="true" signature="621:672" ph="SELECT objec... current_games" />
-            <marker date="1472027453778" expanded="true" signature="729:780" ph="SELECT DISTI... current_games" />
-            <marker date="1472027453778" expanded="true" signature="2051:2078" ph="SELECT 'name... " />
-            <marker date="1472027453778" expanded="true" signature="4501:4568" ph="SELECT id, d... " />
+            <element signature="e#1431#1432#0" expanded="false" />
+            <element signature="e#1458#1459#0" expanded="false" />
+            <element signature="e#1488#1489#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
+            <element signature="e#1545#1546#0" expanded="false" />
+            <element signature="e#1573#1574#0" expanded="false" />
+            <element signature="e#1604#1605#0" expanded="false" />
+            <element signature="e#1631#1632#0" expanded="false" />
+            <element signature="e#1672#1673#0" expanded="false" />
+            <element signature="e#1704#1705#0" expanded="false" />
+            <element signature="e#1741#1742#0" expanded="false" />
+            <element signature="e#1786#1787#0" expanded="false" />
+            <element signature="e#1829#1830#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1704,17 +1773,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/test/StringServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="450">
           <caret line="34" column="56" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="56" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#440#441#0" expanded="false" />
+            <element signature="e#463#464#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1472113027912" expanded="true" signature="368:410" ph="INSERT INTO current_games... " />
+            <marker date="1472113027912" expanded="true" signature="466:520" ph="UPDATE curre... " />
+            <marker date="1472113027912" expanded="true" signature="581:638" ph="INSERT INTO current_games... " />
+            <marker date="1472113027912" expanded="true" signature="692:743" ph="SELECT objec... current_games" />
+            <marker date="1472113027912" expanded="true" signature="800:851" ph="SELECT DISTI... current_games" />
+            <marker date="1472113027912" expanded="true" signature="2122:2149" ph="SELECT 'name... " />
+            <marker date="1472113027912" expanded="true" signature="4984:5051" ph="SELECT id, d... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="279">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

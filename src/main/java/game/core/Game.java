@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Game implements Serializable {
     private static final long serialVersionUID = 1L;
-    private static final String NO_SUCH = "НЕТ ТАКОГО КОРОДА ИЛИ УЖЕ УПОМИНАЛСЯ";
+    private static final String NO_SUCH = "НЕТ ТАКОГО ГОРОДА ИЛИ ОН УЖЕ УПОМИНАЛСЯ";
 
     private Set<Integer> history;
     private int gameID;

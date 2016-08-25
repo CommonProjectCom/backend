@@ -3,8 +3,10 @@ package game.core;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -129,11 +131,23 @@ public class GameDB {
 
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
-            game = (Game) resultSet.getObject(1);
+
+            byte[] buf = resultSet.getBytes(1);
+            ObjectInputStream objectIn = null;
+            if (buf != null)
+                objectIn = new ObjectInputStream(new ByteArrayInputStream(buf));
+
+            Object deSerializedObject = objectIn.readObject();
+
+            game = (Game) deSerializedObject;
 
             resultSet.close();
             preparedStatement.close();
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
