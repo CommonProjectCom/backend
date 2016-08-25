@@ -28,7 +28,7 @@ public class MoveServlet extends HttpServlet {
 
         GameDB bd = new GameDB();
         int gameID = 0;
-        Game game;
+        Game game = null;
 
         try {
             int length = request.getContentLength();
@@ -42,13 +42,15 @@ public class MoveServlet extends HttpServlet {
             String inputString = new String(input);
 
             Parameter param = new Parameter(inputString);
-            param.setMove(param.getMove() + " Test OK");
+
             gameID = param.getGameID();
 
             if (gameID > 0) {
                 game = bd.getGame(gameID);
                 param.setMove(game.setMove(param.getMove()));
                 bd.updateGame(game);
+            } else {
+                param.setMove(param.getMove() + " Test OK");
             }
 
             response.setStatus(HttpServletResponse.SC_OK);

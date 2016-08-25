@@ -65,7 +65,7 @@ public class GameDB {
     public ArrayList<String> getData() {
         ArrayList<String> cities = new ArrayList<>();
 
-        String sql = "SELECT 'name' FROM 'cities'";
+        String sql = "SELECT name FROM cities";
 
         try {
             Statement statement = connection.createStatement();
