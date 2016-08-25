@@ -6,6 +6,7 @@ public class Parameter {
     private static final String STATE = "State";
     private static final String NAME = "Name";
     private static final String MOVE = "Move";
+    private static final String SEPARATOR = "@";
 
     private int id = 0;
     private String state = null;
@@ -20,7 +21,7 @@ public class Parameter {
     }
 
     public Parameter(String input) {
-        String[] strings = input.split("@");
+        String[] strings = input.split(SEPARATOR);
         for (String value : strings) {
             setValue(value);
         }
@@ -29,11 +30,11 @@ public class Parameter {
     @Override
     public String toString() {
         return "GameID:" + id +
-                "@" +
+                SEPARATOR +
                 "State:" + state +
-                "@" +
+                SEPARATOR +
                 "Move:"  + move +
-                "@" +
+                SEPARATOR +
                 "Name:"  + name;
     }
 

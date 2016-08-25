@@ -29,7 +29,7 @@ public class MoveServlet extends HttpServlet {
 
         GameDB bd = new GameDB();
         int gameID;
-        Game game;
+        Game game = null;
 
         try {
             int length = request.getContentLength();
@@ -47,13 +47,20 @@ public class MoveServlet extends HttpServlet {
             gameID = param.getGameID();
 
             if (gameID > 0) {
-                game = bd.getGame(gameID);
-                if (game != null) {
+
+                try {
+                    game = bd.getGame(gameID);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+                if (game == null) {
+                    param.setMove("GAME NOT FOUND");
+                } else {
                     param.setMove(game.setMove(param.getMove()));
                     bd.updateGame(game);
-                } else {
-                    param.setMove("GAME NOT FOUND");
                 }
+
             } else {
                 param.setMove("ERROR ID");
             }
@@ -64,7 +71,7 @@ public class MoveServlet extends HttpServlet {
             writer.flush();
             writer.close();
 
-        } catch (IOException | SQLException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
