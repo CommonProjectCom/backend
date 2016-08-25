@@ -50,7 +50,7 @@ public class MoveServlet extends HttpServlet {
                 param.setMove(game.setMove(param.getMove()));
                 bd.updateGame(game);
             } else {
-                param.setMove(param.getMove() + " Test OK");
+                param.setMove("NO GAME");
             }
 
             response.setStatus(HttpServletResponse.SC_OK);
