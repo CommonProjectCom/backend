@@ -16,7 +16,7 @@ public class Game implements Serializable {
     public Game(int id, GameDB db) {
         this.history = new LinkedHashSet<>();
         this.gameID = id;
-        loadData(db);
+        this.data = loadData(db);
     }
 
     /*
@@ -27,7 +27,7 @@ public class Game implements Serializable {
 
     public String setMove(String move) {
 
-        System.out.println(this.toString());
+        System.out.println("in Game.setMove: " + this.toString());
 
         if (!data.containsValue(move))
             return NO_SUCH;
