@@ -4,7 +4,7 @@
     <list id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="bd.disconnect" />
     <list id="01078dcb-bdab-43b6-ba49-fcd677d864af" name="Rejected commit: Default" comment="test" />
     <list id="52c3d324-b5b7-4c4f-bbbd-b25726b54e90" name="Rejected commit: Default (2)" comment="DISTINCT" />
-    <list default="true" id="5eb2d882-1be9-46af-b166-7fa62179e083" name="Rejected commit: Default (3)" comment="add logic move">
+    <list default="true" id="5eb2d882-1be9-46af-b166-7fa62179e083" name="Rejected commit: Default (3)" comment="if (currentMove != null || currentMove.charAt(currentMove.length() - 1) != firstChar)&#10;            return ERROR_MOVE;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="69b589ac-0f62-4aac-9b0d-7c46d6b17834" name="Rejected commit: Rejected commit: Default (3)" comment="updateGame" />
@@ -97,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
@@ -137,11 +137,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+            <state relative-caret-position="203">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -255,9 +255,9 @@
         <option value="$PROJECT_DIR$/src/main/java/game/test/StringServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/core/Parameter.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/87339d01-2989-4dde-ae07-d82c11d1d2c3/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/game/core/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/core/GameDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/core/Game.java" />
       </list>
     </option>
   </component>
@@ -1001,14 +1001,7 @@
       <workItem from="1471861475728" duration="4719000" />
       <workItem from="1471866304748" duration="8890000" />
       <workItem from="1472023676894" duration="14581000" />
-      <workItem from="1472109798106" duration="13033000" />
-    </task>
-    <task id="LOCAL-00056" summary="DATE">
-      <created>1471534964427</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1471534964428</updated>
+      <workItem from="1472109798106" duration="13230000" />
     </task>
     <task id="LOCAL-00057" summary="Locale Europe/Kiev">
       <created>1471535806068</created>
@@ -1346,11 +1339,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472125225924</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="if (currentMove != null || currentMove.charAt(currentMove.length() - 1) != firstChar)&#10;            return ERROR_MOVE;">
+      <created>1472125469559</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1472125469559</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125830000" />
+    <option name="totallyTimeSpent" value="126027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -1404,7 +1404,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmMoveToFailedCommit value="2" />
-    <MESSAGE value="destroyed singleton GameDB" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="DATE" />
     <MESSAGE value="Locale Europe/Kiev" />
@@ -1429,7 +1428,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="NO GAME" />
     <MESSAGE value="add logic move" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logic move" />
+    <MESSAGE value="if (currentMove != null || currentMove.charAt(currentMove.length() - 1) != firstChar)&#10;            return ERROR_MOVE;" />
+    <option name="LAST_COMMIT_MESSAGE" value="if (currentMove != null || currentMove.charAt(currentMove.length() - 1) != firstChar)&#10;            return ERROR_MOVE;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1728,16 +1728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -1760,6 +1750,16 @@
         <state relative-caret-position="567">
           <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

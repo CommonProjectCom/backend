@@ -48,10 +48,14 @@ public class MoveServlet extends HttpServlet {
 
             if (gameID > 0) {
                 game = bd.getGame(gameID);
-                param.setMove(game.setMove(param.getMove()));
-                bd.updateGame(game);
+                if (game != null) {
+                    param.setMove(game.setMove(param.getMove()));
+                    bd.updateGame(game);
+                } else {
+                    param.setMove("GAME NOT FOUND");
+                }
             } else {
-                param.setMove("NO GAME");
+                param.setMove("ERROR ID");
             }
 
             response.setStatus(HttpServletResponse.SC_OK);
