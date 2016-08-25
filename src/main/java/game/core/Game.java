@@ -25,7 +25,21 @@ public class Game implements Serializable {
     */
 
     public String setMove(String move) {
-        return NO_SUCH;
+        if (!data.containsValue(move))
+            return NO_SUCH;
+
+        char firstChar = move.charAt(0);
+        char lastChar = move.charAt(move.length() - 1);
+        data.get(firstChar).remove(move);
+
+        String newMove = null;
+
+        for (String city : data.get(lastChar)) {
+            data.get(lastChar).remove(city);
+            newMove = city;
+        }
+
+        return newMove;
     }
 
     public int getGameID() {
