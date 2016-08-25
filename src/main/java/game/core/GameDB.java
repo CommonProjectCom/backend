@@ -108,6 +108,7 @@ public class GameDB {
     }
 
     public void updateGame(Game game) {
+        System.out.println(game.toString());
         int gameID = game.getGameID();
 
         try {

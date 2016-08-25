@@ -26,6 +26,9 @@ public class Game implements Serializable {
     */
 
     public String setMove(String move) {
+
+        System.out.println(this.toString());
+
         if (!data.containsValue(move))
             return NO_SUCH;
 
@@ -61,5 +64,15 @@ public class Game implements Serializable {
         }
 
         return data;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "history=" + history +
+                ", gameID=" + gameID +
+                ", data=" + data +
+                ", currentMove='" + currentMove + '\'' +
+                '}';
     }
 }
