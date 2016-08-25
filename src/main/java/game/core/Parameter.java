@@ -2,10 +2,10 @@ package game.core;
 
 public class Parameter {
 
-    static final String GAME_ID = "GameID";
-    static final String STATE = "State";
-    static final String NAME = "Name";
-    static final String MOVE = "Move";
+    private static final String GAME_ID = "GameID";
+    private static final String STATE = "State";
+    private static final String NAME = "Name";
+    private static final String MOVE = "Move";
 
     private int id = 0;
     private String state = null;
@@ -67,9 +67,11 @@ public class Parameter {
         return id;
     }
 
+    /*
     public String getState() {
         return state;
     }
+    */
 
     public String getMove() {
         return move;

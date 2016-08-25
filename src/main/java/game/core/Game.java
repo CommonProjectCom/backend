@@ -34,7 +34,7 @@ public class Game implements Serializable {
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
 
-        if (currentMove != null || currentMove.charAt(currentMove.length() - 1) != firstChar)
+        if (currentMove != null && currentMove.charAt(currentMove.length() - 1) != firstChar)
             return ERROR_MOVE;
 
         if (!data.get(firstChar).contains(move))
@@ -50,7 +50,7 @@ public class Game implements Serializable {
         return currentMove;
     }
 
-    public int getGameID() {
+    int getGameID() {
         return gameID;
     }
 

@@ -57,12 +57,14 @@ public class GameDB {
         return properties;
     }
 
+    /*
     public int getCityID(String city) {
         int id = -1;
         return id;
     }
+    */
 
-    public ArrayList<String> getData() {
+    ArrayList<String> getData() {
         ArrayList<String> cities = new ArrayList<>();
 
         String sql = "SELECT name FROM cities";
@@ -124,7 +126,7 @@ public class GameDB {
 
 
     public Game getGame(int id) throws SQLException, IOException, ClassNotFoundException {
-        Game game = null;
+        Game deSerializedGame = null;
 
         PreparedStatement preparedStatement = connection.prepareStatement(READ_OBJECT_SQL);
         preparedStatement.setLong(1, id);
@@ -133,18 +135,15 @@ public class GameDB {
         resultSet.next();
 
         byte[] buf = resultSet.getBytes(1);
-        ObjectInputStream objectIn = null;
-        if (buf != null)
+        ObjectInputStream objectIn;
+        if (buf != null) {
             objectIn = new ObjectInputStream(new ByteArrayInputStream(buf));
-
-        Object deSerializedObject = objectIn.readObject();
-
-        game = (Game) deSerializedObject;
-
+            deSerializedGame = (Game) objectIn.readObject();
+        }
         resultSet.close();
         preparedStatement.close();
 
-        return game;
+        return deSerializedGame;
     }
 
 

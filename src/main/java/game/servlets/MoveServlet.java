@@ -28,8 +28,8 @@ public class MoveServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         GameDB bd = new GameDB();
-        int gameID = 0;
-        Game game = null;
+        int gameID;
+        Game game;
 
         try {
             int length = request.getContentLength();
