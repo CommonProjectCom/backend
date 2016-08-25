@@ -4,11 +4,8 @@
     <list id="8ec1d638-065d-44a8-b00d-0a5b72a501f4" name="Default" comment="bd.disconnect" />
     <list id="01078dcb-bdab-43b6-ba49-fcd677d864af" name="Rejected commit: Default" comment="test" />
     <list id="52c3d324-b5b7-4c4f-bbbd-b25726b54e90" name="Rejected commit: Default (2)" comment="DISTINCT" />
-    <list default="true" id="5eb2d882-1be9-46af-b166-7fa62179e083" name="Rejected commit: Default (3)" comment="clear code">
+    <list default="true" id="5eb2d882-1be9-46af-b166-7fa62179e083" name="Rejected commit: Default (3)" comment="fix code">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/core/Game.java" afterPath="$PROJECT_DIR$/src/main/java/game/core/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/core/Parameter.java" afterPath="$PROJECT_DIR$/src/main/java/game/core/Parameter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java" afterPath="$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java" />
     </list>
     <list id="69b589ac-0f62-4aac-9b0d-7c46d6b17834" name="Rejected commit: Rejected commit: Default (3)" comment="updateGame" />
     <ignored path="mytomcatapp.iws" />
@@ -77,11 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="927">
+              <caret line="73" column="57" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -130,6 +127,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="game.cities" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/8713e7ea/87339d01-2989-4dde-ae07-d82c11d1d2c3/game.cities">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -154,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/websocket/WordgameServerEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/websocket/WsConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/websocket/WordgameClientEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/in/dergachovda/websocket/WebSocketServer.java" />
@@ -205,6 +216,7 @@
         <option value="$PROJECT_DIR$/src/main/java/game/core/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/core/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java" />
+        <option value="dbtable:/8713e7ea/87339d01-2989-4dde-ae07-d82c11d1d2c3/game.cities" />
       </list>
     </option>
   </component>
@@ -978,14 +990,7 @@
       <workItem from="1471861475728" duration="4719000" />
       <workItem from="1471866304748" duration="8890000" />
       <workItem from="1472023676894" duration="14581000" />
-      <workItem from="1472109798106" duration="15842000" />
-    </task>
-    <task id="LOCAL-00059" summary="add time">
-      <created>1471536623500</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1471536623501</updated>
+      <workItem from="1472109798106" duration="16713000" />
     </task>
     <task id="LOCAL-00060" summary="time format">
       <created>1471537288250</created>
@@ -1323,11 +1328,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472128537086</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="fix code">
+      <created>1472129742462</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1472129742462</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128639000" />
+    <option name="totallyTimeSpent" value="129510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="1" />
@@ -1381,7 +1393,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <confirmMoveToFailedCommit value="2" />
-    <MESSAGE value="Locale Europe/Kiev" />
     <MESSAGE value="fix SimpleDateFormat" />
     <MESSAGE value="add time" />
     <MESSAGE value="time format" />
@@ -1406,7 +1417,8 @@
     <MESSAGE value="if (currentMove != null || currentMove.charAt(currentMove.length() - 1) != firstChar)&#10;            return ERROR_MOVE;" />
     <MESSAGE value="param.setMove(&quot;GAME NOT FOUND&quot;);" />
     <MESSAGE value="clear code" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear code" />
+    <MESSAGE value="fix code" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1627,19 +1639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/8713e7ea/87339d01-2989-4dde-ae07-d82c11d1d2c3/game.cities">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/test/MoveTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1705,6 +1704,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/test/StringServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="73" column="57" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Parameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-535">
@@ -1717,27 +1740,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/Parameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+    <entry file="dbDummy://dbtable:/8713e7ea/87339d01-2989-4dde-ae07-d82c11d1d2c3/game.cities">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/test/StringServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-          <folding />
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

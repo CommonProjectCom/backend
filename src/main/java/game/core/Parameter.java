@@ -29,13 +29,14 @@ public class Parameter {
 
     @Override
     public String toString() {
-        return "GameID:" + id +
-                SEPARATOR +
-                "State:" + state +
-                SEPARATOR +
-                "Move:"  + move +
-                SEPARATOR +
-                "Name:"  + name;
+        String param = "GameID:" + id + SEPARATOR + "Move:"  + move;
+
+        if (state != null)
+            param += SEPARATOR + "State:" + state;
+        if (name != null)
+            param += SEPARATOR + "Name:"  + name;
+
+        return param;
     }
 
     private void setValue(String input) {
