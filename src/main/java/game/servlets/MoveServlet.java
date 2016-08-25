@@ -55,14 +55,14 @@ public class MoveServlet extends HttpServlet {
                 }
 
                 if (game == null) {
-                    param.setMove("GAME NOT FOUND");
+                    param.setState("GAME_NOT_FOUND");
                 } else {
                     param.setMove(game.setMove(param.getMove()));
                     bd.updateGame(game);
                 }
 
             } else {
-                param.setMove("ERROR ID");
+                param.setState("ERROR_GAME_ID");
             }
 
             response.setStatus(HttpServletResponse.SC_OK);

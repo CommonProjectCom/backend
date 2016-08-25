@@ -69,25 +69,23 @@ public class Parameter {
         return id;
     }
 
-    /*
     public String getState() {
         return state;
     }
-    */
 
     public String getMove() {
         return move;
     }
 
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    private void setId(String id) {
+    public void setId(String id) {
         this.id = Integer.valueOf(id);
     }
 
-    private void setState(String state) {
+    public void setState(String state) {
         this.state = state;
     }
 
