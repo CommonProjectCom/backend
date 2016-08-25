@@ -26,14 +26,16 @@ public class Game implements Serializable {
     */
 
     public String setMove(String move) {
-
-        System.out.println("in Game.setMove: " + this.toString());
-
-        if (!data.containsValue(move))
-            return NO_SUCH;
+        System.out.println("Move: " + move);
+        System.out.println("in Game.setMove begin: " + this.toString());
 
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
+
+        if (!data.get(firstChar).contains(move))
+            return NO_SUCH;
+
+
         data.get(firstChar).remove(move);
 
         String newMove = null;
@@ -42,7 +44,7 @@ public class Game implements Serializable {
             data.get(lastChar).remove(city);
             newMove = city;
         }
-
+        System.out.println("in Game.setMove end: " + this.toString());
         return newMove;
     }
 
