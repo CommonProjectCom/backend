@@ -16,6 +16,7 @@ public class Game implements Serializable {
     public Game(int id, GameDB db) {
         this.history = new LinkedHashSet<>();
         this.gameID = id;
+        loadData(db);
     }
 
     /*
