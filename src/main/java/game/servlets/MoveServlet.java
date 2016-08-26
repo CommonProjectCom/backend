@@ -56,6 +56,7 @@ public class MoveServlet extends HttpServlet {
 
                 if (game == null) {
                     param.setState("GAME_NOT_FOUND");
+                    param.setMove("");
                 } else {
                     param.setMove(game.setMove(param.getMove()));
                     bd.updateGame(game);
@@ -63,6 +64,7 @@ public class MoveServlet extends HttpServlet {
 
             } else {
                 param.setState("ERROR_GAME_ID");
+                param.setMove("");
             }
 
             response.setStatus(HttpServletResponse.SC_OK);

@@ -3,21 +3,18 @@ package game.core;
 public class Parameter {
 
     private static final String GAME_ID = "GameID";
-    private static final String STATE = "State";
-    private static final String NAME = "Name";
     private static final String MOVE = "Move";
+    private static final String STATE = "State";
     private static final String SEPARATOR = "@";
 
-    private int id = 0;
+    private int gameID = 0;
     private String state = null;
     private String move = null;
-    private String name = null;
 
-    public Parameter(int id, String state, String move, String name) {
-        this.id = id;
+    public Parameter(int gameID, String state, String move) {
+        this.gameID = gameID;
         this.state = state;
-        this.move = move;
-        this.name = name;
+        this.move = move.toUpperCase();
     }
 
     public Parameter(String input) {
@@ -29,12 +26,10 @@ public class Parameter {
 
     @Override
     public String toString() {
-        String param = "GameID:" + id + SEPARATOR + "Move:"  + move;
+        String param = "GameID:" + gameID + SEPARATOR + "Move:"  + move;
 
         if (state != null)
             param += SEPARATOR + "State:" + state;
-        if (name != null)
-            param += SEPARATOR + "Name:"  + name;
 
         return param;
     }
@@ -44,29 +39,19 @@ public class Parameter {
         String value = in[1];
         switch (in[0]) {
             case GAME_ID:
-                setId(value);
+                setGameID(value);
                 break;
-
-            case NAME:
-                setName(value);
-                break;
-
             case MOVE:
-                setMove(value);
+                setMove(value.toUpperCase());
                 break;
-
             case STATE:
                 setState(value);
                 break;
         }
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getGameID() {
-        return id;
+        return gameID;
     }
 
     public String getState() {
@@ -77,12 +62,8 @@ public class Parameter {
         return move;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setId(String id) {
-        this.id = Integer.valueOf(id);
+    public void setGameID(String gameID) {
+        this.gameID = Integer.valueOf(gameID);
     }
 
     public void setState(String state) {

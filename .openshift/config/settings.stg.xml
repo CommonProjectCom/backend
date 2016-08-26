@@ -8,7 +8,7 @@
   </mirrors>
   <profiles>
     <profile>
-      <id>nexus</id>
+      <gameID>nexus</gameID>
       <repositories>
         <repository>
           <id>eap</id>
