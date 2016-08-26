@@ -5,14 +5,11 @@ import java.util.*;
 
 public class Game implements Serializable {
     private static final long serialVersionUID = 1L;
-    private static final String NO_SUCH = "НЕТ ТАКОГО ГОРОДА ИЛИ ОН УЖЕ УПОМИНАЛСЯ";
-    private static final String FALSE_MOVE = "FALSE MOVE";
 
     private Set<Integer> history;
     private int gameID;
     private Map<Character, Set<String>> data;
     private String currentMove;
-
 
     public Game(int id, GameDB db) {
         this.history = new LinkedHashSet<>();
@@ -20,22 +17,16 @@ public class Game implements Serializable {
         this.data = loadData(db);
     }
 
-    /*
-    public boolean move(int move) {
-        return !history.add(move);
-    }
-    */
-
-    public String setMove(String move) {
-
+    public String setMove(String input) {
+        String move = input.toUpperCase();
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
 
         if (currentMove != null && currentMove.charAt(currentMove.length() - 1) != firstChar)
-            return FALSE_MOVE;
+            return Error.FALSE_MOVE.toString();
 
         if (!data.get(firstChar).contains(move))
-            return NO_SUCH;
+            return Error.NO_CITY.toString();
 
         data.get(firstChar).remove(move);
 
