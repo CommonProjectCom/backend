@@ -5,7 +5,9 @@
     <artifactId>mytomcatapp</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <build>
+    <name>mytomcatapp</name>
+
+    <!--    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -13,8 +15,7 @@
                 <version>2.3.2</version>
             </plugin>
         </plugins>
-    </build>
-    <name>mytomcatapp</name>
+    </build>-->
 
     <repositories>
         <repository>
@@ -83,19 +84,6 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
-
-        <!--
-                <dependency>
-                    <groupId>javax.websocket</groupId>
-                    <artifactId>javax.websocket-api</artifactId>
-                    <version>1.1</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.eclipse.jetty.websocket</groupId>
-                    <artifactId>websocket-servlet</artifactId>
-                    <version>9.3.6.v20151106</version>
-                </dependency>
-        -->
     </dependencies>
 
     <profiles>
