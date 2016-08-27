@@ -23,10 +23,10 @@ public class Game implements Serializable {
         char lastChar = move.charAt(move.length() - 1);
 
         if (currentMove != null && currentMove.charAt(currentMove.length() - 1) != firstChar)
-            return Error.FALSE_MOVE.toString();
+            return Message.FALSE_MOVE;
 
         if (!data.get(firstChar).contains(move))
-            return Error.NO_CITY.toString();
+            return Message.NO_CITY;
 
         data.get(firstChar).remove(move);
 

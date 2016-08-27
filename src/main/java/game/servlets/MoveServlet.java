@@ -1,9 +1,6 @@
 package game.servlets;
 
-import game.core.Error;
-import game.core.Game;
-import game.core.GameDB;
-import game.core.Parameter;
+import game.core.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
@@ -56,14 +53,14 @@ public class MoveServlet extends HttpServlet {
                 }
 
                 if (game == null) {
-                    param.setMove(Error.GAME_NOT_FOUND);
+                    param.setMove(Message.GAME_NOT_FOUND);
                 } else {
                     param.setMove(game.setMove(param.getMove()));
                     bd.updateGame(game);
                 }
 
             } else {
-                param.setMove(Error.INVALID_GAME_ID);
+                param.setMove(Message.INVALID_GAME_ID);
             }
 
             response.setStatus(HttpServletResponse.SC_OK);

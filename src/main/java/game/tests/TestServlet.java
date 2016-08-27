@@ -1,4 +1,4 @@
-package game.test;
+package game.tests;
 
 import game.core.GameDB;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/test")
+@WebServlet("/tests")
 public class TestServlet extends HttpServlet {
 
     public TestServlet() {

@@ -49,20 +49,12 @@ public class GameDB {
     }
 
     private Properties loadProperties() throws IOException {
-
         Properties properties = new Properties();
         InputStream stream = getClass().getResourceAsStream("db.properties");
         properties.load(stream);
 
         return properties;
     }
-
-    /*
-    public int getCityID(String city) {
-        int id = -1;
-        return id;
-    }
-    */
 
     ArrayList<String> getData() {
         ArrayList<String> cities = new ArrayList<>();

@@ -60,7 +60,4 @@ public class Parameter {
     public void setMove(String move) {
         this.move = move;
     }
-    public void setMove(Error error) {
-        this.move = error.toString();
-    }
 }
