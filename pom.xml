@@ -7,7 +7,7 @@
     <version>1.0</version>
     <name>mytomcatapp</name>
 
-    <build>
+<!--    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -15,7 +15,7 @@
                 <version>2.3.2</version>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 
     <repositories>
         <repository>
