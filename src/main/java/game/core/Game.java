@@ -22,14 +22,14 @@ public class Game implements Serializable {
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
 
+        if (input.equals(Message.GIVE_UP))
+            return Message.GAME_OVER;
+
         if (currentMove != null && currentMove.charAt(currentMove.length() - 1) != firstChar)
             return Message.FALSE_MOVE;
 
         if (!data.get(firstChar).contains(move))
             return Message.NO_CITY;
-
-        if (input.equals(Message.GIVE_UP))
-            return Message.GAME_OVER;
 
         data.get(firstChar).remove(move);
 
