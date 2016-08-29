@@ -28,6 +28,9 @@ public class Game implements Serializable {
         if (!data.get(firstChar).contains(move))
             return Message.NO_CITY;
 
+        if (input.equals(Message.GIVE_UP))
+            return Message.GAME_OVER;
+
         data.get(firstChar).remove(move);
 
         for (String city : data.get(lastChar)) {

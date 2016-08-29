@@ -46,10 +46,13 @@
       <column id="14" parent="7" name="name">
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="15" parent="7" name="object_value">
+      <column id="15" parent="7" name="state">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="16" parent="7" name="object_value">
         <data-type>blob|0</data-type>
       </column>
-      <key id="16" parent="7" name="PRIMARY">
+      <key id="17" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
