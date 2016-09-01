@@ -23,21 +23,39 @@ public class Game implements Serializable {
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
         System.out.println("move: " + move + " fc=" + firstChar + " lc=" + lastChar);
-        if (input.equals(Message.GIVE_UP))
+
+        if (input.equals(Message.GIVE_UP)) {
+            System.out.println(Message.GAME_OVER);
             return Message.GAME_OVER;
+        }
 
-        if (currentMove != null && currentMove.charAt(currentMove.length() - 1) != firstChar)
+        if (currentMove != null && currentMove.charAt(currentMove.length() - 1) != firstChar) {
+            System.out.println(Message.FALSE_MOVE);
             return Message.FALSE_MOVE;
+        }
 
-        if (!data.get(firstChar).contains(move))
+
+        if (!data.get(firstChar).contains(move)) {
+            System.out.println(Message.NO_CITY);
             return Message.NO_CITY;
+        }
 
         data.get(firstChar).remove(move);
+        System.out.println("data.get(firstChar).remove(move);");
 
-        for (String city : data.get(lastChar)) {
+        Set<String> cities = data.get(lastChar);
+
+        if (cities.isEmpty()) {
+            System.out.println(Message.YOU_WIN);
+            return Message.YOU_WIN;
+        }
+
+        for (String city : cities) {
             data.get(lastChar).remove(city);
             currentMove = city;
+            break;
         }
+
         return currentMove;
     }
 

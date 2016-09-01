@@ -7,5 +7,6 @@ public class Message {
     public static final String INVALID_GAME_ID = "ERROR - INVALID GAME ID";
     public static final String GIVE_UP = "I GIVE UP";
     public static final String GAME_OVER = "GAME OVER";
+    public static final String YOU_WIN = "YOU WIN";
 
 }
