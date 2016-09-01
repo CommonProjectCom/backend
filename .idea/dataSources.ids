@@ -16,43 +16,60 @@
       <schema id="5" name="performance_schema"/>
       <table id="6" parent="2" name="cities"/>
       <table id="7" parent="2" name="current_games"/>
-      <column id="8" parent="6" name="id">
+      <table id="8" parent="2" name="citiesTest"/>
+      <column id="9" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="9" parent="6" name="name">
+      <column id="10" parent="6" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(25)|0</data-type>
       </column>
-      <column id="10" parent="6" name="url">
+      <column id="11" parent="6" name="url">
         <mandatory>1</mandatory>
         <data-type>varchar(255)|0</data-type>
       </column>
-      <key id="11" parent="6" name="PRIMARY">
+      <key id="12" parent="6" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="12" parent="7" name="id">
+      <column id="13" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="13" parent="7" name="date">
+      <column id="14" parent="7" name="date">
         <mandatory>1</mandatory>
         <data-type>timestamp|0</data-type>
         <default-expression>CURRENT_TIMESTAMP</default-expression>
       </column>
-      <column id="14" parent="7" name="name">
+      <column id="15" parent="7" name="name">
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="15" parent="7" name="state">
+      <column id="16" parent="7" name="state">
         <data-type>varchar(25)|0</data-type>
       </column>
-      <column id="16" parent="7" name="object_value">
+      <column id="17" parent="7" name="object_value">
         <data-type>blob|0</data-type>
       </column>
-      <key id="17" parent="7" name="PRIMARY">
+      <key id="18" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="19" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="20" parent="8" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="21" parent="8" name="url">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <key id="22" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>

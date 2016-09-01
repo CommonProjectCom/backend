@@ -67,7 +67,7 @@ public class GameDB {
             ResultSet resultSet = statement.getResultSet();
             while (resultSet.next()) {
                 String city = resultSet.getString("name");
-                cities.add(city);
+                cities.add(city.toUpperCase());
             }
         } catch (SQLException e) {
             e.printStackTrace();
