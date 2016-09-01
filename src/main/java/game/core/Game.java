@@ -50,21 +50,19 @@ public class Game implements Serializable {
 
         Random random = new Random();
         int counter = random.nextInt(5) + 1;
-
-        for (String city : cities) {
-            if (counter < 0)
+        String city = null;
+        for (String next : cities) {
+            city = next;
+            if (counter < 0) {
                 break;
-
-            cities.remove(city);
-
-            if (data.get(city.charAt(city.length() - 1)).isEmpty()) {
-                return city + " > " + Message.YOU_LOSE;
             }
-            currentMove = city;
-
             counter--;
         }
-
+        currentMove = city;
+        cities.remove(city);
+        if (data.get(city.charAt(city.length() - 1)).isEmpty()) {
+            return city + " > " + Message.YOU_LOSE;
+        }
         return currentMove;
     }
 
