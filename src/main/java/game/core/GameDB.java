@@ -102,7 +102,7 @@ public class GameDB {
     }
 
     public void updateGame(Game game) {
-        System.out.println(Object.class.getName() + "in updateGame\n" + game.toString());
+        System.out.println("in updateGame\n" + game.toString());
         int gameID = game.getGameID();
 
         try {
