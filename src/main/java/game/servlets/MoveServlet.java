@@ -28,10 +28,9 @@ public class MoveServlet extends HttpServlet {
         GameDB bd = null;
         try {
             bd = new GameDB();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("Error load DB!");
         }
         int gameID;
         Game game = null;
@@ -56,6 +55,7 @@ public class MoveServlet extends HttpServlet {
                     game = bd.getGame(gameID);
                 } catch (SQLException e) {
                     e.printStackTrace();
+                    System.out.println("Error get GAME from DB!");
                 }
 
                 if (game == null) {
@@ -82,14 +82,17 @@ public class MoveServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
+            System.out.println("Error IO or Class!");
         } catch (SQLException e) {
             e.printStackTrace();
+            System.out.println("Error SQL!");
         }
 
         try {
             bd.disconnect();
         } catch (SQLException e) {
             e.printStackTrace();
+            System.out.println("Error disconnect DB!");
         }
     }
 }
