@@ -71,8 +71,8 @@
       <file leaf-file-name="MoveServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+            <state relative-caret-position="299">
+              <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -947,14 +947,7 @@
       <workItem from="1472463400594" duration="409000" />
       <workItem from="1472470270387" duration="2820000" />
       <workItem from="1472480000666" duration="1633000" />
-      <workItem from="1472720094550" duration="3968000" />
-    </task>
-    <task id="LOCAL-00087" summary="test">
-      <created>1472039102706</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1472039102707</updated>
+      <workItem from="1472720094550" duration="4156000" />
     </task>
     <task id="LOCAL-00088" summary="test">
       <created>1472039470111</created>
@@ -1292,11 +1285,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472725045259</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="fix">
+      <created>1472725227389</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1472725227389</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154777000" />
+    <option name="totallyTimeSpent" value="154965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="800" height="875" extended-state="4" />
@@ -1372,10 +1372,10 @@
     <MESSAGE value="maven 3.0" />
     <MESSAGE value="GAME_OVER" />
     <MESSAGE value="add toUpperCase in getData" />
-    <MESSAGE value="fix" />
     <MESSAGE value="test" />
     <MESSAGE value="add sout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sout" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1670,8 +1670,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/MoveServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+        <state relative-caret-position="299">
+          <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
