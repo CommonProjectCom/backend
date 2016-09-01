@@ -19,15 +19,10 @@ public class GameDB {
     private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
     private static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
 
-
     private Connection connection;
 
-    public GameDB() {
-        try {
-            setConnection();
-        } catch (IOException | SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+    public GameDB() throws SQLException, IOException, ClassNotFoundException {
+        setConnection();
     }
 
     private void setConnection() throws IOException, SQLException, ClassNotFoundException {
@@ -39,13 +34,8 @@ public class GameDB {
                         properties.getProperty("password"));
     }
 
-    public void disconnect() {
-
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public void disconnect() throws SQLException {
+        connection.close();
     }
 
     private Properties loadProperties() throws IOException {
@@ -56,63 +46,49 @@ public class GameDB {
         return properties;
     }
 
-    ArrayList<String> getData() {
+    ArrayList<String> getData() throws SQLException {
         ArrayList<String> cities = new ArrayList<>();
 
         String sql = "SELECT name FROM cities";
 
-        try {
-            Statement statement = connection.createStatement();
-            statement.execute(sql);
-            ResultSet resultSet = statement.getResultSet();
-            while (resultSet.next()) {
-                String city = resultSet.getString("name");
-                cities.add(city.toUpperCase());
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        Statement statement = connection.createStatement();
+        statement.execute(sql);
+        ResultSet resultSet = statement.getResultSet();
+        while (resultSet.next()) {
+            String city = resultSet.getString("name");
+            cities.add(city.toUpperCase());
         }
 
         return cities;
     }
 
-    public int createGame(String clientName) {
-
+    public int createGame(String clientName) throws SQLException {
         int gameID = -1;
 
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(WRITE_NEW_GAME_SQL);
-            preparedStatement.setString(1, clientName);
-            preparedStatement.executeUpdate();
+        PreparedStatement preparedStatement = connection.prepareStatement(WRITE_NEW_GAME_SQL);
+        preparedStatement.setString(1, clientName);
+        preparedStatement.executeUpdate();
 
-            preparedStatement.execute(GET_LAST_INSERT_ID);
-            ResultSet resultSet = preparedStatement.getResultSet();
-            if (resultSet.next()) {
-                gameID = resultSet.getInt("LAST_INSERT_ID()");
-            }
-
-            resultSet.close();
-            preparedStatement.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+        preparedStatement.execute(GET_LAST_INSERT_ID);
+        ResultSet resultSet = preparedStatement.getResultSet();
+        if (resultSet.next()) {
+            gameID = resultSet.getInt("LAST_INSERT_ID()");
         }
+
+        resultSet.close();
+        preparedStatement.close();
 
         return gameID;
     }
 
-    public void updateGame(Game game) {
+    public void updateGame(Game game) throws SQLException {
         int gameID = game.getGameID();
 
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_OBJECT_SQL);
-            preparedStatement.setObject(1, game);
-            preparedStatement.setInt(2, gameID);
-            preparedStatement.executeUpdate();
-            preparedStatement.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_OBJECT_SQL);
+        preparedStatement.setObject(1, game);
+        preparedStatement.setInt(2, gameID);
+        preparedStatement.executeUpdate();
+        preparedStatement.close();
     }
 
 

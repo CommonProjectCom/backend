@@ -25,7 +25,14 @@ public class MoveServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        GameDB bd = new GameDB();
+        GameDB bd = null;
+        try {
+            bd = new GameDB();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         int gameID;
         Game game = null;
 
@@ -75,8 +82,14 @@ public class MoveServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
-        bd.disconnect();
+        try {
+            bd.disconnect();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

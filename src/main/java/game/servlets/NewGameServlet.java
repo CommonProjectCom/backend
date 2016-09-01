@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.sql.SQLException;
 
 
 @WebServlet("/NewGame")
@@ -25,9 +26,16 @@ public class NewGameServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        GameDB db = new GameDB();
+        GameDB db = null;
+        try {
+            db = new GameDB();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
-        int gameID;
+        int gameID = -1;
 
         try {
             int length = request.getContentLength();
@@ -41,7 +49,11 @@ public class NewGameServlet extends HttpServlet {
 
             String hostName = new String(input);
 
-            gameID = db.createGame(hostName);
+            try {
+                gameID = db.createGame(hostName);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
 
             if (gameID > 0) {
                 db.updateGame(new Game(gameID, db));
@@ -56,9 +68,15 @@ public class NewGameServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
             response.getWriter().close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
-        db.disconnect();
+        try {
+            db.disconnect();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }

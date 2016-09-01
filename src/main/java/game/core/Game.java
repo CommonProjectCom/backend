@@ -1,6 +1,7 @@
 package game.core;
 
 import java.io.Serializable;
+import java.sql.SQLException;
 import java.util.*;
 
 public class Game implements Serializable {
@@ -11,7 +12,7 @@ public class Game implements Serializable {
     private Map<Character, Set<String>> data;
     private String currentMove = null;
 
-    public Game(int id, GameDB db) {
+    public Game(int id, GameDB db) throws SQLException {
         this.history = new LinkedHashSet<>();
         this.gameID = id;
         this.data = loadData(db);
@@ -80,7 +81,7 @@ public class Game implements Serializable {
         return gameID;
     }
 
-    private Map<Character, Set<String>> loadData(GameDB db) {
+    private Map<Character, Set<String>> loadData(GameDB db) throws SQLException {
         Map<Character, Set<String>> data = new HashMap<>();
 
         for (String city : db.getData()) {
