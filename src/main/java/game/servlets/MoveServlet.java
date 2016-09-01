@@ -60,7 +60,7 @@ public class MoveServlet extends HttpServlet {
                     param.setMove(Message.GAME_NOT_FOUND);
                 } else {
                     String move = param.getMove();
-                    System.out.println("move = param.getMove();");
+                    System.out.println("String move = param.getMove();");
                     String serverMove = game.setMove(move);
                     System.out.println("serverMove = game.setMove(move);");
                     param.setMove(serverMove);

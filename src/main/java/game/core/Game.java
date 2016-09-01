@@ -9,7 +9,7 @@ public class Game implements Serializable {
     private Set<Integer> history;
     private int gameID;
     private Map<Character, Set<String>> data;
-    private String currentMove;
+    private String currentMove = null;
 
     public Game(int id, GameDB db) {
         this.history = new LinkedHashSet<>();
@@ -18,10 +18,11 @@ public class Game implements Serializable {
     }
 
     public String setMove(String input) {
+        System.out.println("currentMove - " + currentMove);
         String move = input.toUpperCase();
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
-
+        System.out.println("move: " + move + " fc=" + firstChar + " lc=" + lastChar);
         if (input.equals(Message.GIVE_UP))
             return Message.GAME_OVER;
 
