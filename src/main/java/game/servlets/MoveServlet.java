@@ -45,11 +45,12 @@ public class MoveServlet extends HttpServlet {
             gameID = param.getGameID();
 
             if (gameID > 0) {
-
+                System.out.println("gameID > 0");
                 try {
                     game = bd.getGame(gameID);
                 } catch (SQLException e) {
                     e.printStackTrace();
+                    System.out.println("SQLException");
                 }
 
                 if (game == null) {
@@ -61,6 +62,7 @@ public class MoveServlet extends HttpServlet {
 
             } else {
                 param.setMove(Message.INVALID_GAME_ID);
+                System.out.println("INVALID_GAME_ID");
             }
 
             response.setStatus(HttpServletResponse.SC_OK);
