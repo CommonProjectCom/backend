@@ -39,6 +39,8 @@ public class Game implements Serializable {
         }
 
         data.get(firstChar).remove(move);
+
+        //Move by server -->
         Set<String> cities = data.get(lastChar);
 
         if (cities.isEmpty()) {
@@ -46,16 +48,21 @@ public class Game implements Serializable {
             return Message.YOU_WIN;
         }
 
-        int counter = 7;
+        Random random = new Random();
+        int counter = random.nextInt(5) + 1;
+
         for (String city : cities) {
-            data.get(lastChar).remove(city);
+            if (counter < 0)
+                break;
+
+            cities.remove(city);
+
             if (data.get(city.charAt(city.length() - 1)).isEmpty()) {
-                return Message.YOU_LOSE;
+                return city + " > " + Message.YOU_LOSE;
             }
             currentMove = city;
+
             counter--;
-            if (counter < 1)
-                break;
         }
 
         return currentMove;
