@@ -39,8 +39,10 @@ public class MoveServlet extends HttpServlet {
             }
             sin.close();
             String inputString = new String(input);
+            System.out.println("inputString: " + inputString);
 
             Parameter param = new Parameter(inputString);
+            System.out.println("param: " + param.toString());
 
             gameID = param.getGameID();
 
