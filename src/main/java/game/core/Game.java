@@ -18,11 +18,9 @@ public class Game implements Serializable {
     }
 
     public String setMove(String input) {
-        System.out.println("currentMove - " + currentMove);
         String move = input.toUpperCase();
         char firstChar = move.charAt(0);
         char lastChar = move.charAt(move.length() - 1);
-        System.out.println("move: " + move + " fc=" + firstChar + " lc=" + lastChar);
 
         if (input.equals(Message.GIVE_UP)) {
             System.out.println(Message.GAME_OVER);
@@ -41,8 +39,6 @@ public class Game implements Serializable {
         }
 
         data.get(firstChar).remove(move);
-        System.out.println("data.get(firstChar).remove(move);");
-
         Set<String> cities = data.get(lastChar);
 
         if (cities.isEmpty()) {
@@ -50,13 +46,16 @@ public class Game implements Serializable {
             return Message.YOU_WIN;
         }
 
+        int counter = 7;
         for (String city : cities) {
             data.get(lastChar).remove(city);
             if (data.get(city.charAt(city.length() - 1)).isEmpty()) {
                 return Message.YOU_LOSE;
             }
             currentMove = city;
-            break;
+            counter--;
+            if (counter < 1)
+                break;
         }
 
         return currentMove;
