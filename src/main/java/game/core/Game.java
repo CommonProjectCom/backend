@@ -17,21 +17,29 @@ public class Game implements Serializable {
         this.data = loadData(db);
     }
 
+    private char getFirstLetter(String s) {
+        return s.charAt(0);
+    }
+
+    private char getLastLetter(String s) {
+        return s.charAt(s.length() - 1);
+    }
+
     public String setMove(String input) {
-        String move = input.toUpperCase();
-        char firstChar = move.charAt(0);
-        char lastChar = move.charAt(move.length() - 1);
 
         if (input.equals(Message.GIVE_UP)) {
             System.out.println(Message.GAME_OVER);
             return Message.GAME_OVER;
         }
 
-        if (currentMove != null && currentMove.charAt(currentMove.length() - 1) != firstChar) {
+        String move = input.toUpperCase();
+        char firstChar = getFirstLetter(move);
+        char lastChar = getLastLetter(move);
+
+        if (currentMove != null && getLastLetter(currentMove) != firstChar) {
             System.out.println(Message.FALSE_MOVE);
             return Message.FALSE_MOVE;
         }
-
 
         if (!data.get(firstChar).contains(move)) {
             System.out.println(Message.NO_CITY);
@@ -51,6 +59,7 @@ public class Game implements Serializable {
         Random random = new Random();
         int counter = random.nextInt(5) + 1;
         String city = null;
+
         for (String next : cities) {
             city = next;
             if (counter < 0) {
@@ -58,9 +67,10 @@ public class Game implements Serializable {
             }
             counter--;
         }
+
         currentMove = city;
         cities.remove(city);
-        if (data.get(city.charAt(city.length() - 1)).isEmpty()) {
+        if (data.get(getLastLetter(city)).isEmpty()) {
             return city + " > " + Message.YOU_LOSE;
         }
         return currentMove;
