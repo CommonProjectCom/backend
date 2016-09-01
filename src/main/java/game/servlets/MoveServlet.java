@@ -39,34 +39,25 @@ public class MoveServlet extends HttpServlet {
             }
             sin.close();
             String inputString = new String(input);
-            System.out.println("inputString: " + inputString);
 
             Parameter param = new Parameter(inputString);
-            System.out.println("param: " + param.toString());
 
             gameID = param.getGameID();
 
             if (gameID > 0) {
-                System.out.println("gameID > 0");
                 try {
                     game = bd.getGame(gameID);
                 } catch (SQLException e) {
                     e.printStackTrace();
-                    System.out.println("SQLException");
                 }
 
                 if (game == null) {
-                    System.out.println(Message.GAME_NOT_FOUND);
                     param.setMove(Message.GAME_NOT_FOUND);
                 } else {
                     String move = param.getMove();
-                    System.out.println("String move = param.getMove();");
                     String serverMove = game.setMove(move);
-                    System.out.println("serverMove = game.setMove(move);");
                     param.setMove(serverMove);
-                    System.out.println("param.setMove(serverMove);");
                     bd.updateGame(game);
-                    System.out.println("BD Update");
                 }
 
             } else {

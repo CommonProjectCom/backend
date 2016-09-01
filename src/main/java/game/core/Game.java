@@ -52,6 +52,9 @@ public class Game implements Serializable {
 
         for (String city : cities) {
             data.get(lastChar).remove(city);
+            if (data.get(city.charAt(city.length() - 1)).isEmpty()) {
+                return Message.YOU_LOSE;
+            }
             currentMove = city;
             break;
         }
