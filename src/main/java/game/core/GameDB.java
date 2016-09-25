@@ -112,9 +112,9 @@ public class GameDB {
 
     public String getURL(String nameCity) throws SQLException, UnsupportedEncodingException {
         String url = null;
-        nameCity = "Одесса";
+        nameCity = new String("Одесса".getBytes(), "UTF-8");
 //        String arg = new String (arg.getBytes ("UTF-8"), "ISO-8859-1")
-        System.out.println("nameCity = " + new String (nameCity.getBytes ("UTF-8"), "ISO-8859-1"));
+        System.out.println("nameCity = " + new String(nameCity.getBytes("UTF-8"), "ISO-8859-1"));
         PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL);
         preparedStatement.setString(1, nameCity);
 
