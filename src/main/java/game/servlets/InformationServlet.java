@@ -2,6 +2,7 @@ package game.servlets;
 
 import game.core.Game;
 import game.core.GameDB;
+import game.core.Parameter;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
@@ -55,7 +56,7 @@ public class InformationServlet extends HttpServlet {
 
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
-            writer.write("URL:" + url);
+            writer.write("Name:" + cityName + Parameter.SEPARATOR + "URL:" + url);
             writer.flush();
             writer.close();
         } catch (IOException e) {

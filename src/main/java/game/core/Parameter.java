@@ -4,7 +4,7 @@ public class Parameter {
 
     private static final String GAME_ID = "GameID";
     private static final String MOVE = "Move";
-    private static final String SEPARATOR = "@";
+    public static final String SEPARATOR = "@";
 
     private int gameID = 0;
     private String state = null;
