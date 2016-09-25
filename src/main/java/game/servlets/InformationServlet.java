@@ -22,7 +22,7 @@ public class InformationServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("Cp1251");
+        request.setCharacterEncoding("UTF-8");
         String cityName = request.getParameter("name");
         String url = getUrl(cityName);
         response.getOutputStream().println("Info Servlet Works");
@@ -37,7 +37,7 @@ public class InformationServlet extends HttpServlet {
         try {
             int length = request.getContentLength();
             byte[] input = new byte[length];
-            request.setCharacterEncoding("utf8");
+            request.setCharacterEncoding("UTF-8");
             ServletInputStream sin = request.getInputStream();
             int c, count = 0;
             while ((c = sin.read(input, count, input.length - count)) != -1) {

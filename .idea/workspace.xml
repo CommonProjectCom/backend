@@ -11,7 +11,7 @@
     </list>
     <list id="69b589ac-0f62-4aac-9b0d-7c46d6b17834" name="Rejected commit: Rejected commit: Default (3)" comment="updateGame" />
     <list id="2af43337-b734-4ac2-b66a-271cdeb7aabd" name="Rejected commit: Rejected commit: Default (3) (2)" comment="fix" />
-    <list default="true" id="7b80d1b7-6cef-47ce-8b4c-1030713f8ad0" name="Rejected commit: Rejected commit: Default (3) (3)" comment="fix">
+    <list default="true" id="7b80d1b7-6cef-47ce-8b4c-1030713f8ad0" name="Rejected commit: Rejected commit: Default (3) (3)" comment="Deploy">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mytomcatapp.iws" />
@@ -106,8 +106,8 @@
       <file leaf-file-name="InformationServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/InformationServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="113">
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1003,14 +1003,7 @@
       <workItem from="1473245069455" duration="447000" />
       <workItem from="1474022694580" duration="679000" />
       <workItem from="1474803810285" duration="1083000" />
-      <workItem from="1474806691546" duration="6350000" />
-    </task>
-    <task id="LOCAL-00106" summary="param.setMove(&quot;GAME NOT FOUND&quot;);">
-      <created>1472125882936</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1472125882937</updated>
+      <workItem from="1474806691546" duration="6629000" />
     </task>
     <task id="LOCAL-00107" summary="clear code">
       <created>1472128537086</created>
@@ -1348,11 +1341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474814011171</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="Deploy">
+      <created>1474815956692</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1474815956692</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173431000" />
+    <option name="totallyTimeSpent" value="173710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1416,7 +1416,6 @@
     <MESSAGE value="fixed system error" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="fix maven build plugin version" />
-    <MESSAGE value="Deploy" />
     <MESSAGE value="maven 3.0" />
     <MESSAGE value="GAME_OVER" />
     <MESSAGE value="add toUpperCase in getData" />
@@ -1431,7 +1430,8 @@
     <MESSAGE value="add doGet to Info Servlet" />
     <MESSAGE value="Add test Info Servlet" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="Deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deploy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1725,8 +1725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/InformationServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="113">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
