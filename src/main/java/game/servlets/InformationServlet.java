@@ -50,7 +50,7 @@ public class InformationServlet extends HttpServlet {
                 count += c;
             }
             sin.close();
-            String cityName = new String(input);
+            String cityName = new String(input, "UTF-8");
 
             url = getUrl(cityName);
 
