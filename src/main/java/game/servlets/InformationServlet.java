@@ -29,12 +29,11 @@ public class InformationServlet extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         response.getWriter().println("<!DOCTYPE HTML>");
-        response.getWriter().println("<html>" +
-                "<body>" +
-                "<p>" + "Info Servlet Works" + "</p>" +
-                "<p>" + cityName + " : " + url + "</p>" +
-                "</body>" +
-                "</html>");
+        response.getWriter().println("<html>" + "<body>");
+        response.getWriter().println("<p>" + "Info Servlet Works" + "</p>");
+        response.getWriter().println("<p>" + "CityName: " + cityName + "</p>");
+        response.getWriter().println("<p>" + "URL: " + url + "</p>");
+        response.getWriter().println("</body>" + "</html>");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
