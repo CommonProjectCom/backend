@@ -25,10 +25,15 @@ public class InformationServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String cityName = request.getParameter("name");
         String url = getUrl(cityName);
-        response.getOutputStream().println("Info Servlet Works");
-        if (!url.isEmpty()) {
-            response.getOutputStream().println(cityName + " : " + url);
-        }
+
+        response.setContentType("text/html;charset=UTF-8");
+        response.getWriter().println("<!DOCTYPE HTML>");
+        response.getWriter().println("<html>" +
+                "<body>" +
+                "<p>" + "Info Servlet Works" + "</p>" +
+                "<p>" + cityName + " : " + url + "</p>" +
+                "</body>" +
+                "</html>");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
