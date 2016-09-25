@@ -22,7 +22,8 @@ public class InformationServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cityName = new String(request.getParameter("name").getBytes(request.getCharacterEncoding()),"cp1251");
+        request.setCharacterEncoding("utf8");
+        String cityName = request.getParameter("name");
         String url = getUrl(cityName);
         response.getOutputStream().println("Info Servlet Works");
         if (!url.isEmpty()) {
