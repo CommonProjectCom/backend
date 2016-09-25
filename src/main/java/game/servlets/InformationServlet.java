@@ -37,6 +37,7 @@ public class InformationServlet extends HttpServlet {
         try {
             int length = request.getContentLength();
             byte[] input = new byte[length];
+            request.setCharacterEncoding("utf8");
             ServletInputStream sin = request.getInputStream();
             int c, count = 0;
             while ((c = sin.read(input, count, input.length - count)) != -1) {
@@ -44,9 +45,6 @@ public class InformationServlet extends HttpServlet {
             }
             sin.close();
             String cityName = new String(input);
-
-            //Test
-            System.out.println("Info/input: " + cityName);
 
             url = getUrl(cityName);
 
@@ -64,6 +62,9 @@ public class InformationServlet extends HttpServlet {
     }
 
     private String getUrl(String cityName) {
+        //Test
+        System.out.println("Info/input: " + cityName);
+
         String url = "Error";
 
         try {
