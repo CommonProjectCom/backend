@@ -69,10 +69,10 @@ public class InformationServlet extends HttpServlet {
 
     private String getUrl(String cityName) {
         //Test
+        cityName = "Одесса";
         System.out.println("Info/input: " + cityName);
 
         String url = "Error";
-
         try {
             GameDB db = new GameDB();
             url = db.getURL(cityName);
