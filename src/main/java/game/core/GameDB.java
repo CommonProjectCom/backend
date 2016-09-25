@@ -13,9 +13,9 @@ import java.util.Properties;
 
 public class GameDB {
 
-    private static final String WRITE_NEW_GAME_SQL = "INSERT INTO current_games(name) VALUES (?)";
+    private static final String NEW_GAME_SQL = "INSERT INTO current_games(name) VALUES (?)";
     private static final String UPDATE_OBJECT_SQL = "UPDATE current_games SET object_value = ? WHERE id = ?";
-    //    private static final String WRITE_OBJECT_SQL = "INSERT INTO current_games(id, object_value) VALUES (?, ?)";
+    private static final String GET_URL_SQL = "SELECT url FROM cities WHERE name = ?";
     private static final String READ_OBJECT_SQL = "SELECT object_value FROM current_games WHERE id = ?";
     private static final String GET_LAST_INSERT_ID = "SELECT DISTINCT LAST_INSERT_ID() from current_games";
 
@@ -65,7 +65,7 @@ public class GameDB {
     public int createGame(String clientName) throws SQLException {
         int gameID = -1;
 
-        PreparedStatement preparedStatement = connection.prepareStatement(WRITE_NEW_GAME_SQL);
+        PreparedStatement preparedStatement = connection.prepareStatement(NEW_GAME_SQL);
         preparedStatement.setString(1, clientName);
         preparedStatement.executeUpdate();
 
@@ -113,6 +113,21 @@ public class GameDB {
         return deSerializedGame;
     }
 
+    public String getURL(String nameCity) throws SQLException {
+        String url = null;
+
+        PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL);
+        preparedStatement.setString(1, nameCity);
+
+        ResultSet resultSet = preparedStatement.getResultSet();
+        while (resultSet.next()) {
+            url = resultSet.getString("name");
+        }
+
+        resultSet.close();
+        preparedStatement.close();
+        return url;
+    }
 
     public String[] getLastDateFromBD() throws Exception {
 

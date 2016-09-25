@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="281500672">
+  <component name="DataSourceManagerImpl" format="xml" hash="389906073">
     <data-source source="LOCAL" name="MySQL - mytomcatapp@127.11.197.2" uuid="87339d01-2989-4dde-ae07-d82c11d1d2c3">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
