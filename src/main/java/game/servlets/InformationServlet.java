@@ -22,7 +22,12 @@ public class InformationServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String cityName = request.getParameter("name");
+        String url = getUrl(cityName);
         response.getOutputStream().println("Info Servlet Works");
+        if (!url.isEmpty()) {
+            response.getOutputStream().println(cityName + " : " + url);
+        }
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
