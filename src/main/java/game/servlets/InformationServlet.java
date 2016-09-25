@@ -44,6 +44,9 @@ public class InformationServlet extends HttpServlet {
             sin.close();
             String cityName = new String(input);
 
+            //Test
+            System.out.println("Info/input: " + cityName);
+
             url = getUrl(cityName);
 
             response.setStatus(HttpServletResponse.SC_OK);
