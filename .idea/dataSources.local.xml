@@ -11,7 +11,7 @@
         <secret-storage>master_key</secret-storage>
         <user>57973ff47628e106b8000189</user>
         <use-password>false</use-password>
-        <private-key-path>$PROJECT_DIR$/../../../Team Project/Server/openshift/privateKey.ppk</private-key-path>
+        <private-key-path>E:\Dima\Dropbox\Team Project\Server\openshift\privateKey.ppk</private-key-path>
       </ssh-properties>
     </data-source>
   </component>
