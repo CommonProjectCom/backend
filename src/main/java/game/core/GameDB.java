@@ -116,12 +116,13 @@ public class GameDB {
     public String getURL(String nameCity) throws SQLException {
         String url = null;
 
-        PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL);
-        preparedStatement.setString(1, nameCity);
+//        PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL);
+        PreparedStatement preparedStatement = connection.prepareStatement("SELECT url FROM cities WHERE name=\"Одесса\"");
+//        preparedStatement.setString(1, nameCity);
 
         ResultSet resultSet = preparedStatement.getResultSet();
         while (resultSet.next()) {
-            url = resultSet.getString("name");
+            url = resultSet.getString("url");
         }
 
         resultSet.close();
