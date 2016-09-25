@@ -3,10 +3,7 @@ package game.core;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -113,10 +110,11 @@ public class GameDB {
         return deSerializedGame;
     }
 
-    public String getURL(String nameCity) throws SQLException {
+    public String getURL(String nameCity) throws SQLException, UnsupportedEncodingException {
         String url = null;
         nameCity = "Одесса";
-        System.out.println("nameCity = " + nameCity);
+//        String arg = new String (arg.getBytes ("UTF-8"), "ISO-8859-1")
+        System.out.println("nameCity = " + new String (nameCity.getBytes ("UTF-8"), "ISO-8859-1"));
         PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL);
         preparedStatement.setString(1, nameCity);
 
