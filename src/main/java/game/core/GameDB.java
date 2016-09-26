@@ -117,9 +117,10 @@ public class GameDB {
             preparedStatement.setString(1, "\"" + nameCity + "\"");
             System.out.println("set param");
             ResultSet resultSet = preparedStatement.getResultSet();
+            System.out.println("getResult");
             while (resultSet.next()) {
-                System.out.println(resultSet);
                 url = resultSet.getString("url");
+                System.out.println(url);
             }
             resultSet.close();
             preparedStatement.close();
