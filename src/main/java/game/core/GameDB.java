@@ -110,22 +110,24 @@ public class GameDB {
         return deSerializedGame;
     }
 
-    public String getURL(String nameCity) throws SQLException, UnsupportedEncodingException {
+    public String getURL(String nameCity) {
         String url = "ERROR_IN_GameDB_getURL";
-        System.out.println("nameCity (in DB/getURL)= " + nameCity);
-        PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL);
-        preparedStatement.setString(1, nameCity);
-
-        ResultSet resultSet = preparedStatement.getResultSet();
-        while (resultSet.next()) {
-            System.out.println(resultSet);
-            url = resultSet.getString("url");
+        try (PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL)){
+            preparedStatement.setString(1, "\"" + nameCity + "\"");
+            ResultSet resultSet = preparedStatement.getResultSet();
+            while (resultSet.next()) {
+                System.out.println(resultSet);
+                url = resultSet.getString("url");
+            }
+            resultSet.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error is GameDB/getURL()!");
+        } finally {
+            System.out.println("url = " + url);
+            return url;
         }
-
-        resultSet.close();
-        preparedStatement.close();
-        System.out.println("url = " + url);
-        return url;
     }
 
     public String[] getLastDateFromBD() throws Exception {
