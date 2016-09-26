@@ -25,8 +25,7 @@ public class InformationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String cityName = request.getParameter("name");
-        System.out.println("UTF-8      = " + new String(cityName.getBytes("UTF-8")));
-        System.out.println("ISO-8859-1 = " + new String(cityName.getBytes("ISO-8859-1")));
+        System.out.println("name: " + cityName);
         String url = getUrl(cityName);
 
         response.setContentType("text/html;charset=UTF-8");
@@ -70,7 +69,6 @@ public class InformationServlet extends HttpServlet {
 
     private String getUrl(String cityName) {
         //Test
-        cityName = "Одесса";
         System.out.println("Info/input: " + cityName);
 
         String url = "Error";
