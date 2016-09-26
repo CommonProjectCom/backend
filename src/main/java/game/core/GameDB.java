@@ -115,8 +115,8 @@ public class GameDB {
         try (PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL)){
             preparedStatement.setString(1, nameCity);
             ResultSet resultSet = preparedStatement.getResultSet();
-            System.out.println(preparedStatement.toString());
-            System.out.println(resultSet.toString());
+            System.out.println("preparedStatement:" + preparedStatement.toString());
+            System.out.println("resultSet:" + resultSet.toString());
             if (resultSet.next()) {
                 url = resultSet.getString("url");
                 System.out.println("in while " + url);
