@@ -113,15 +113,12 @@ public class GameDB {
     public String getURL(String nameCity) {
         String url = "ERROR_IN_GameDB_getURL";
         try (PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL)){
-            System.out.println("in try");
             preparedStatement.setString(1, nameCity);
-            System.out.println("set param");
             ResultSet resultSet = preparedStatement.getResultSet();
-            System.out.println("getResult");
             System.out.println(preparedStatement.toString());
-            while (resultSet.next()) {
+            if (resultSet.next()) {
                 url = resultSet.getString("url");
-                System.out.println(url);
+                System.out.println("in while " + url);
             }
             resultSet.close();
             preparedStatement.close();
@@ -130,7 +127,6 @@ public class GameDB {
             System.out.println(e.getSQLState());
             System.out.println("Error is GameDB/getURL()!");
         } finally {
-            System.out.println("url = " + url);
             return url;
         }
     }

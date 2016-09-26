@@ -11,7 +11,7 @@
     </list>
     <list id="69b589ac-0f62-4aac-9b0d-7c46d6b17834" name="Rejected commit: Rejected commit: Default (3)" comment="updateGame" />
     <list id="2af43337-b734-4ac2-b66a-271cdeb7aabd" name="Rejected commit: Rejected commit: Default (3) (2)" comment="fix" />
-    <list default="true" id="7b80d1b7-6cef-47ce-8b4c-1030713f8ad0" name="Rejected commit: Rejected commit: Default (3) (3)" comment="Deploy">
+    <list default="true" id="7b80d1b7-6cef-47ce-8b4c-1030713f8ad0" name="Rejected commit: Rejected commit: Default (3) (3)" comment="fix sql">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mytomcatapp.iws" />
@@ -55,19 +55,19 @@
       <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+            <state relative-caret-position="174">
+              <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1474892147439" expanded="true" signature="253:295" ph="INSERT INTO current_games... " />
-                <marker date="1474892147439" expanded="true" signature="351:405" ph="UPDATE curre... " />
-                <marker date="1474892147439" expanded="true" signature="455:490" ph="SELECT url F... cities" />
-                <marker date="1474892147439" expanded="true" signature="455:492" ph="SELECT url F... cities" />
-                <marker date="1474892147439" expanded="true" signature="455:493" ph="SELECT url F... cities" />
-                <marker date="1474892147439" expanded="true" signature="546:597" ph="SELECT objec... current_games" />
-                <marker date="1474892147439" expanded="true" signature="654:705" ph="SELECT DISTI... current_games" />
-                <marker date="1474892147439" expanded="true" signature="1745:1768" ph="SELECT name cities" />
-                <marker date="1474892147439" expanded="true" signature="5058:5125" ph="SELECT id, d... " />
+                <marker date="1474892272386" expanded="true" signature="253:295" ph="INSERT INTO current_games... " />
+                <marker date="1474892272386" expanded="true" signature="351:405" ph="UPDATE curre... " />
+                <marker date="1474892272386" expanded="true" signature="455:490" ph="SELECT url F... cities" />
+                <marker date="1474892272386" expanded="true" signature="455:492" ph="SELECT url F... cities" />
+                <marker date="1474892272386" expanded="true" signature="455:493" ph="SELECT url F... cities" />
+                <marker date="1474892272386" expanded="true" signature="546:597" ph="SELECT objec... current_games" />
+                <marker date="1474892272386" expanded="true" signature="654:705" ph="SELECT DISTI... current_games" />
+                <marker date="1474892272386" expanded="true" signature="1745:1768" ph="SELECT name cities" />
+                <marker date="1474892272386" expanded="true" signature="5044:5111" ph="SELECT id, d... " />
               </folding>
             </state>
           </provider>
@@ -1008,14 +1008,7 @@
       <workItem from="1474829031677" duration="3466000" />
       <workItem from="1474883896752" duration="6961000" />
       <workItem from="1474891130115" duration="64000" />
-      <workItem from="1474891288715" duration="946000" />
-    </task>
-    <task id="LOCAL-00133" summary="fix">
-      <created>1472722580839</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1472722580839</updated>
+      <workItem from="1474891288715" duration="1085000" />
     </task>
     <task id="LOCAL-00134" summary="test">
       <created>1472724766151</created>
@@ -1353,11 +1346,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474892157060</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="fix sql">
+      <created>1474892289138</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1474892289138</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188848000" />
+    <option name="totallyTimeSpent" value="188987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1441,11 +1441,11 @@
     <MESSAGE value="Add test Info Servlet" />
     <MESSAGE value="UTF-8" />
     <MESSAGE value="all fixed" />
-    <MESSAGE value="fix sql" />
     <MESSAGE value="test" />
     <MESSAGE value="fix" />
     <MESSAGE value="Deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy" />
+    <MESSAGE value="fix sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix sql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1714,19 +1714,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+        <state relative-caret-position="174">
+          <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1474892147439" expanded="true" signature="253:295" ph="INSERT INTO current_games... " />
-            <marker date="1474892147439" expanded="true" signature="351:405" ph="UPDATE curre... " />
-            <marker date="1474892147439" expanded="true" signature="455:490" ph="SELECT url F... cities" />
-            <marker date="1474892147439" expanded="true" signature="455:492" ph="SELECT url F... cities" />
-            <marker date="1474892147439" expanded="true" signature="455:493" ph="SELECT url F... cities" />
-            <marker date="1474892147439" expanded="true" signature="546:597" ph="SELECT objec... current_games" />
-            <marker date="1474892147439" expanded="true" signature="654:705" ph="SELECT DISTI... current_games" />
-            <marker date="1474892147439" expanded="true" signature="1745:1768" ph="SELECT name cities" />
-            <marker date="1474892147439" expanded="true" signature="5058:5125" ph="SELECT id, d... " />
+            <marker date="1474892272386" expanded="true" signature="253:295" ph="INSERT INTO current_games... " />
+            <marker date="1474892272386" expanded="true" signature="351:405" ph="UPDATE curre... " />
+            <marker date="1474892272386" expanded="true" signature="455:490" ph="SELECT url F... cities" />
+            <marker date="1474892272386" expanded="true" signature="455:492" ph="SELECT url F... cities" />
+            <marker date="1474892272386" expanded="true" signature="455:493" ph="SELECT url F... cities" />
+            <marker date="1474892272386" expanded="true" signature="546:597" ph="SELECT objec... current_games" />
+            <marker date="1474892272386" expanded="true" signature="654:705" ph="SELECT DISTI... current_games" />
+            <marker date="1474892272386" expanded="true" signature="1745:1768" ph="SELECT name cities" />
+            <marker date="1474892272386" expanded="true" signature="5044:5111" ph="SELECT id, d... " />
           </folding>
         </state>
       </provider>
