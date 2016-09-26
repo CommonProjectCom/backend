@@ -30,7 +30,7 @@ public class InformationServlet extends HttpServlet {
         response.getWriter().println("<html>" + "<body>");
         response.getWriter().println("<p>" + "Info Servlet Works" + "</p>");
         response.getWriter().println("<p>" + "CityName: " + cityName + "</p>");
-        response.getWriter().println("<p>" + "URL: " + url + "</p>");
+        response.getWriter().println("<p>" + "<a href=\"" + url + "\">" + url + "</a></p>");
         response.getWriter().println("</body>" + "</html>");
     }
 

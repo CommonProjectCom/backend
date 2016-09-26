@@ -115,22 +115,14 @@ public class GameDB {
         try (PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL)){
             preparedStatement.setString(1, nameCity);
             ResultSet resultSet = preparedStatement.executeQuery();
-            System.out.println("preparedStatement:" + preparedStatement.toString());
-            System.out.println("resultSet:" + resultSet.toString());
             if (resultSet.next()) {
                 url = resultSet.getString("url");
-                System.out.println("in while " + url);
             }
             resultSet.close();
             preparedStatement.close();
-            System.out.println("in end of try");
         } catch (SQLException e) {
-            System.out.println("in catch");
             e.printStackTrace();
-            System.out.println(e.getSQLState());
-            System.out.println("Error is GameDB/getURL()!");
         } finally {
-            System.out.println("in finally");
             return url;
         }
     }
