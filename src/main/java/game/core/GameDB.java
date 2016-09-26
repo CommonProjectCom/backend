@@ -116,6 +116,7 @@ public class GameDB {
             preparedStatement.setString(1, nameCity);
             ResultSet resultSet = preparedStatement.getResultSet();
             System.out.println(preparedStatement.toString());
+            System.out.println(resultSet.toString());
             if (resultSet.next()) {
                 url = resultSet.getString("url");
                 System.out.println("in while " + url);
