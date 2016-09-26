@@ -123,6 +123,7 @@ public class GameDB {
             preparedStatement.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            System.out.println(e.getSQLState());
             System.out.println("Error is GameDB/getURL()!");
         } finally {
             System.out.println("url = " + url);
