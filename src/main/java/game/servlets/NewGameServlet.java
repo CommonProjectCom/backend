@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.sql.SQLException;
 
-
 @WebServlet("/NewGame")
 public class NewGameServlet extends HttpServlet {
 

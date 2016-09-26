@@ -9,6 +9,4 @@ public class Message {
     public static final String GAME_OVER = "GAME OVER";
     public static final String YOU_WIN = "YOU WIN";
     public static final String YOU_LOSE = "YOU LOSE";
-
-
 }
