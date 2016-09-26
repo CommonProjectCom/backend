@@ -56,8 +56,10 @@ public class InformationServlet extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_OK);
             OutputStreamWriter writer = new OutputStreamWriter(response.getOutputStream());
             writer.write("Name:" + cityName + Parameter.SEPARATOR + "URL:" + url);
+
             writer.flush();
             writer.close();
+
         } catch (IOException e) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().print(e.getMessage());
