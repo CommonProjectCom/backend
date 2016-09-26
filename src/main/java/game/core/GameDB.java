@@ -113,7 +113,9 @@ public class GameDB {
     public String getURL(String nameCity) {
         String url = "ERROR_IN_GameDB_getURL";
         try (PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL)){
+            System.out.println("in try");
             preparedStatement.setString(1, "\"" + nameCity + "\"");
+            System.out.println("set param");
             ResultSet resultSet = preparedStatement.getResultSet();
             while (resultSet.next()) {
                 System.out.println(resultSet);

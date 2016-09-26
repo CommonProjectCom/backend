@@ -75,7 +75,7 @@ public class InformationServlet extends HttpServlet {
             GameDB db = new GameDB();
             url = db.getURL(cityName);
             db.disconnect();
-        } catch (SQLException | ClassNotFoundException | IOException e) {
+        } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         } finally {
             return url;
