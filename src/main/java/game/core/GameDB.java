@@ -124,10 +124,12 @@ public class GameDB {
             resultSet.close();
             preparedStatement.close();
         } catch (SQLException e) {
+            System.out.println("in catch");
             e.printStackTrace();
             System.out.println(e.getSQLState());
             System.out.println("Error is GameDB/getURL()!");
         } finally {
+            System.out.println("in finally");
             return url;
         }
     }
