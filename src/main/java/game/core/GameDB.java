@@ -118,6 +118,7 @@ public class GameDB {
             System.out.println("set param");
             ResultSet resultSet = preparedStatement.getResultSet();
             System.out.println("getResult");
+            System.out.println(preparedStatement.toString());
             while (resultSet.next()) {
                 url = resultSet.getString("url");
                 System.out.println(url);
