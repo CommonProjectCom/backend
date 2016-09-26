@@ -10,10 +10,10 @@ public class Parameter {
     private String state = null;
     private String move = null;
 
-    public Parameter(int gameID, String move) {
-        this.gameID = gameID;
-        this.move = move;
-    }
+//    public Parameter(int gameID, String move) {
+//        this.gameID = gameID;
+//        this.move = move;
+//    }
 
     public Parameter(String input) {
         String[] strings = input.split(SEPARATOR);

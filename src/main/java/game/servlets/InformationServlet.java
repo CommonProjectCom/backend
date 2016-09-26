@@ -1,6 +1,5 @@
 package game.servlets;
 
-import game.core.Game;
 import game.core.GameDB;
 import game.core.Parameter;
 
@@ -71,7 +70,7 @@ public class InformationServlet extends HttpServlet {
         //Test
         System.out.println("Info/input: " + cityName);
 
-        String url = "Error";
+        String url = "ERROR_IN_INFO_getURL";
         try {
             GameDB db = new GameDB();
             url = db.getURL(cityName);

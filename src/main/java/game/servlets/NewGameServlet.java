@@ -29,9 +29,7 @@ public class NewGameServlet extends HttpServlet {
         GameDB db = null;
         try {
             db = new GameDB();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
@@ -49,10 +47,12 @@ public class NewGameServlet extends HttpServlet {
 
             String hostName = new String(input);
 
-            try {
-                gameID = db.createGame(hostName);
-            } catch (SQLException e) {
-                e.printStackTrace();
+            if (db != null) {
+                try {
+                    gameID = db.createGame(hostName);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
 
             if (gameID > 0) {
@@ -73,6 +73,7 @@ public class NewGameServlet extends HttpServlet {
         }
 
         try {
+            assert db != null;
             db.disconnect();
         } catch (SQLException e) {
             e.printStackTrace();

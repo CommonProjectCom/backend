@@ -52,20 +52,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="-126">
+              <caret line="114" column="50" selection-start-line="114" selection-start-column="50" selection-end-line="114" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1474885729094" expanded="true" signature="253:295" ph="INSERT INTO current_games... " />
+                <marker date="1474885729094" expanded="true" signature="351:405" ph="UPDATE curre... " />
+                <marker date="1474885729094" expanded="true" signature="455:492" ph="SELECT url F... cities" />
+                <marker date="1474885729094" expanded="true" signature="546:597" ph="SELECT objec... current_games" />
+                <marker date="1474885729094" expanded="true" signature="654:705" ph="SELECT DISTI... current_games" />
+                <marker date="1474885729094" expanded="true" signature="1745:1768" ph="SELECT name cities" />
+                <marker date="1474885729094" expanded="true" signature="4659:4726" ph="SELECT id, d... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InformationServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InformationServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/InformationServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="1148">
               <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -178,10 +187,10 @@
         <option value="dbtable:/a03c2b44/87339d01-2989-4dde-ae07-d82c11d1d2c3/game.cities" />
         <option value="$PROJECT_DIR$/src/main/java/game/core/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/game/core/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/game/core/GameDB.java" />
         <option value="$PROJECT_DIR$/.openshift/config/server.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/game/servlets/InformationServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/game/core/GameDB.java" />
       </list>
     </option>
   </component>
@@ -976,14 +985,7 @@
       <workItem from="1474803810285" duration="1083000" />
       <workItem from="1474806691546" duration="10330000" />
       <workItem from="1474829031677" duration="3466000" />
-      <workItem from="1474883896752" duration="1627000" />
-    </task>
-    <task id="LOCAL-00122" summary="Deploy">
-      <created>1472314713289</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1472314713289</updated>
+      <workItem from="1474883896752" duration="2350000" />
     </task>
     <task id="LOCAL-00123" summary="fix">
       <created>1472314838203</created>
@@ -1321,11 +1323,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474885449660</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="fix">
+      <created>1474885780127</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1474885780128</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182504000" />
+    <option name="totallyTimeSpent" value="183227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="0" />
@@ -1674,14 +1683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="116" column="51" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/tests/StringServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1692,10 +1693,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/servlets/InformationServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="1148">
           <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/core/GameDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="114" column="50" selection-start-line="114" selection-start-column="50" selection-end-line="114" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1474885729094" expanded="true" signature="253:295" ph="INSERT INTO current_games... " />
+            <marker date="1474885729094" expanded="true" signature="351:405" ph="UPDATE curre... " />
+            <marker date="1474885729094" expanded="true" signature="455:492" ph="SELECT url F... cities" />
+            <marker date="1474885729094" expanded="true" signature="546:597" ph="SELECT objec... current_games" />
+            <marker date="1474885729094" expanded="true" signature="654:705" ph="SELECT DISTI... current_games" />
+            <marker date="1474885729094" expanded="true" signature="1745:1768" ph="SELECT name cities" />
+            <marker date="1474885729094" expanded="true" signature="4659:4726" ph="SELECT id, d... " />
           </folding>
         </state>
       </provider>

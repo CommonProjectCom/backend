@@ -111,13 +111,14 @@ public class GameDB {
     }
 
     public String getURL(String nameCity) throws SQLException, UnsupportedEncodingException {
-        String url = null;
+        String url = "ERROR_IN_GameDB_getURL";
         System.out.println("nameCity (in DB/getURL)= " + nameCity);
         PreparedStatement preparedStatement = connection.prepareStatement(GET_URL_SQL);
         preparedStatement.setString(1, nameCity);
 
         ResultSet resultSet = preparedStatement.getResultSet();
         while (resultSet.next()) {
+            System.out.println(resultSet);
             url = resultSet.getString("url");
         }
 
